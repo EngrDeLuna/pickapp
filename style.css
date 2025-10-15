@@ -64,7 +64,7 @@ input[type="checkbox"] {
 .dropdown-link {
   color: #000;  /* Default text color is black */
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 16px;
   padding: 6px 4px;
   display: inline-flex;
@@ -1087,7 +1087,7 @@ footer {
   text-align: center;
   border-radius: 10px;
   box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
+ font-family: 'Open Sans', Arial, sans-serif;
 }
 
 .back-content {
@@ -1802,7 +1802,7 @@ footer {
   color: #c5c2c1;               /* orange text */
   text-align: center;           /* center text */
   font-weight: bold;            /* bold text */
-  font-family: 'Arial', sans-serif;
+  font-family: 'Open Sans', Arial, sans-serif;
   font-size: 18px;              /* text size */
   padding: 40px 20px;           /* increase top/bottom padding for taller footer */
   /* min-height: 100px; */      /* optional fixed minimum height */
@@ -1827,7 +1827,7 @@ footer {
 .brand-story {
   padding: 80px 10%;
   background-color: #ffffff;
-  font-family: 'Poppins', sans-serif;
+   font-family: 'Open Sans', Arial, sans-serif;
   display: flex;
   justify-content: center; /* center the grid */
 }
@@ -1902,7 +1902,7 @@ footer {
 .leader-profile {
   padding: 80px 10%;
   background-color: #ffffff;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Open Sans', Arial, sans-serif;
   margin-bottom: 100px; /* ✅ space between each leader profile */
   border-bottom: 2px solid rgba(255, 122, 0, 0.2); /* optional subtle divider line */
 }
@@ -1995,7 +1995,7 @@ footer {
 .mission-vision {
   padding: 5px 10%;
   background-color: #ffffff;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Open Sans', Arial, sans-serif;
   text-align: center;
 }
 
@@ -2484,7 +2484,7 @@ footer {
   display: inline-block;
   background-color: #ff7b00; /* orange */
   color: #fff;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Open Sans', Arial, sans-serif;
   font-weight: 600;
   font-size: 1.5rem;
   padding: 0.4rem 1.2rem;
@@ -2668,13 +2668,13 @@ footer {
   border-radius: 20px; /* rounded sides */
   display: inline-block;
   margin-bottom: 0.8rem;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Open Sans', Arial, sans-serif;
   font-weight: 600;
 }
 
 /* Card description */
 .card-desc {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Open Sans', Arial, sans-serif;
   font-size: 0.95rem;
   color: #333;
 }
@@ -2695,7 +2695,7 @@ footer {
   width: 100%;
   padding: 2rem 1rem;
   background-color: #fff;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Open Sans', Arial, sans-serif;
 }
 
 .launch-grid {
@@ -2775,7 +2775,7 @@ footer {
   display: inline-block;
   background-color: #ff9900;
   color: #fff;
-  font-family: "Poppins", sans-serif;
+ font-family: 'Open Sans', Arial, sans-serif;
   font-weight: 600;
   padding: 0.5rem 1rem;
   border-radius: 20px;
@@ -2793,7 +2793,7 @@ footer {
   width: 100%;
   padding: 2rem 1rem;
   background-color: #fff;
-  font-family: "Poppins", sans-serif;
+ font-family: 'Open Sans', Arial, sans-serif;
 }
 
 .news-grid {
@@ -3646,7 +3646,7 @@ footer {
 #vehicle-specs {
     padding: 40px 20px;
     text-align: center;
-    font-family: Arial, sans-serif;
+   font-family: 'Open Sans', Arial, sans-serif;
 }
 
 #vehicle-specs h2 {
