@@ -2144,7 +2144,7 @@ footer {
   }
 
   .leader-image img {
-    width: 95%; /* ✅ smaller image for mobile */
+    width: 90%; /* ✅ smaller image for mobile */
     height: auto; /* no cropping */
     border-radius: 50%; /* keep circle */
     box-shadow: 0 4px 10px #FFA500;
@@ -3800,5 +3800,4 @@ footer {
     gap: 15px;
   }
   .corner-image { width: 60px; }
-
 }
