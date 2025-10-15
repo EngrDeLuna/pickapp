@@ -2105,7 +2105,7 @@ footer {
   }
 
   .brand-image img {
-    width: 70%; /* ✅ makes image smaller on mobile */
+    width: 100%; /* ✅ makes image smaller on mobile */
     height: auto; /* keeps aspect ratio */
     border-radius: 20px;
     margin: 0 auto 20px auto;
@@ -2144,7 +2144,7 @@ footer {
   }
 
   .leader-image img {
-    width: 65%; /* ✅ smaller image for mobile */
+    width: 95%; /* ✅ smaller image for mobile */
     height: auto; /* no cropping */
     border-radius: 50%; /* keep circle */
     box-shadow: 0 4px 10px #FFA500;
@@ -3800,4 +3800,5 @@ footer {
     gap: 15px;
   }
   .corner-image { width: 60px; }
+
 }
