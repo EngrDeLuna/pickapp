@@ -13,13 +13,32 @@ body {
 /* ===== nav container ===== */
 nav {
   background-color: #e2e0db; /* White background */
-  padding: 30px 25px;
+  padding: 10px 25px;
   position: relative;
   display: flex;
   justify-content: center;  /* This ensures nav is centered */
   align-items: center;
   width: 100%;
 }
+
+/* Person icon */
+.person-icon {
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+}
+
+/* Dropdown adjustments for person icon */
+.person-dropdown .dropdown-content {
+  right: 0;  /* align dropdown to the right */
+  left: auto;
+}
+
+.person-dropdown .dropdown-link {
+  cursor: pointer;
+}
+
+
 
 /* Hide checkboxes used for toggles */
 input[type="checkbox"] {
@@ -171,8 +190,11 @@ input[type="checkbox"] {
   margin-top: 6px;
 }
 
-.submenu li { margin: 4px 0; }
+.submenu li { 
+  margin: 4px 0;
 
+
+ }
 .submenu a {
   font-size: 13px;
   color: #333;
@@ -377,7 +399,7 @@ input[type="checkbox"] {
 }
 
   .submenu a {
-    color: #fff;
+   color: #333;;
   }
 /* Hamburger icon fixed */
 .hamburger-icon {
@@ -2213,7 +2235,7 @@ footer {
   align-items: flex-start;
   justify-content: center; /* Centers content horizontally */
   gap: 1.5rem; /* Space between video and text */
-  padding: 1rem 2%; /* Small padding to prevent edge cut-off */
+  padding: 4rem 2%; /* Small padding to prevent edge cut-off */
   max-width: 1200px; /* Limit total width */
   margin: 0 auto; /* Centers the whole section */
 }
@@ -2554,7 +2576,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem 1rem;
+  padding: 4rem 1rem;
 }
 
 /* Image card wrapper */
@@ -2594,13 +2616,33 @@ footer {
   transform: scale(1.08);
 }
 
-/* Responsive adjustment */
-@media (max-width: 768px) {
-  .image-card {
-    max-width: 250px;
+
+
+/* 🧩 Responsive Adjustments */
+@media (max-width: 1024px) {
+  .image-bg img {
+    height: 400px;
   }
 }
 
+/* Responsive adjustment */
+@media (max-width: 768px) {
+  .image-card {
+    max-width: 300px;
+  }
+  .image-bg img {
+    height: 300px;
+  }
+}
+@media (max-width: 480px) {
+  .image-card {
+    max-width: 90%;
+    padding: 0.3rem;
+  }
+  .image-bg img {
+    height: 220px;
+  }
+}
 
 
 
@@ -2791,7 +2833,7 @@ footer {
 /* News Section */
 .news {
   width: 100%;
-  padding: 2rem 1rem;
+  padding: 4rem 1rem;
   background-color: #fff;
  font-family: 'Open Sans', Arial, sans-serif;
 }
@@ -2802,7 +2844,7 @@ footer {
   gap: 5rem; /* reduced gap so image is closer to text */
   max-width: 1200px;
   margin: 0 auto;
-  align-items: center;
+  align-items: center
 }
 
 
@@ -2919,7 +2961,7 @@ footer {
 
 /* ====== DRIVER HERO / HEADER SECTION ====== */
 .driver {
-  padding: 36px 16px;
+  padding: 40px 16px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -3289,7 +3331,7 @@ footer {
 
 /* ====== MERCHANT HERO / HEADER SECTION ====== */
 .merchant {
-  padding: 36px 16px;
+  padding: 40px 16px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -3643,6 +3685,143 @@ footer {
 
 
 
+
+
+
+
+/* =========================
+   PRODUCT DETAIL SECTION
+   ========================= */
+
+.product-detail-section {
+  text-align: center;
+  background-color: #fdfbf7;
+  padding: 60px 20px;
+}
+
+.product-detail-title {
+  display: inline-block;        /* allows padding to wrap tightly around text */
+    padding: 8px 30px;            /* vertical and horizontal padding */
+    background-color: #FFA500;    /* background color behind the text */
+    color: white;                 /* text color */
+    border-radius: 12px;          /* rounded corners */
+    margin-bottom: 30px;
+    font-size: 28px;                /* adjust size if needed */
+}
+
+/* ===== Container ===== */
+.product-detail-container {
+  display: flex;
+  justify-content: center;      /* Centers all cards horizontally */
+  align-items: stretch;         /* Keeps all cards the same height */
+  flex-wrap: nowrap;            /* Keeps all 4 cards in one row */
+  gap: 20px;                    /* Small space between cards */
+  padding: 40px 0;              /* Top/bottom breathing room */
+  background-color: #fdfbf7;
+  max-width: 1300px;
+  margin: 0 auto;
+  overflow-x: auto;             /* Enables scroll on small screens */
+  border-radius: 20px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+}
+
+/* ===== Individual Cards ===== */
+.product-detail-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+  padding: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 300px;
+  flex-shrink: 0;               /* Prevents shrinking */
+  overflow: hidden;             /* Keeps zoomed image inside card */
+}
+
+.product-detail-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(255, 69, 0, 0.7);
+  z-index: 10;
+}
+
+/* ===== Image ===== */
+.product-detail-image {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  transition: transform 0.4s ease; /* Smooth zoom animation */
+}
+
+.product-detail-image:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* ===== Text ===== */
+.product-detail-text {
+  font-size: 15px;
+  color: #333;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .product-detail-container {
+    flex-wrap: wrap;            /* Stack on small screens */
+    gap: 25px;
+    padding: 40px 20px;
+  }
+
+  .product-detail-card {
+    width: 90%;
+  }
+
+  .product-detail-text {
+    font-size: 14px;
+  }
+
+  .product-detail-title {
+    font-size: 24px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #vehicle-specs {
     padding: 40px 20px;
     text-align: center;
@@ -3800,4 +3979,389 @@ footer {
     gap: 15px;
   }
   .corner-image { width: 60px; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* HIRING SECTION */
+.hiring-section {
+  padding: 80px 20px;
+}
+
+.hiring-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* LEFT COLUMN: Open Positions */
+.positions-left {
+  flex: 1;
+  min-width: 300px;
+}
+
+.positions-left h2 {
+  color: #FF7A00;
+  margin-bottom: 10px;
+}
+
+.positions-left p {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Positions list */
+.positions-left ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.positions-left ul li {
+  padding: 5px 0;
+  font-weight: 600;
+  transition: color 0.3s, transform 0.2s;
+  cursor: default;
+}
+
+/* Hover effect for positions items */
+.positions-left ul li:hover {
+  color: #FF7A00;
+  transform: translateX(5px);
+}
+
+.positions-left .details-link {
+  display: block;
+  margin-top: 20px;
+  color: #0073e6;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.positions-left .details-link:hover {
+  color: #005bb5;
+}
+
+/* RIGHT COLUMN: Form */
+.form-right {
+  flex: 1;
+  min-width: 200px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.form-right h2 {
+  color: #FF7A00;
+  margin-bottom: 20px;
+}
+
+.form-right form input,
+.form-right form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 0.8rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Hover/focus effect for inputs and textarea */
+.form-right form input:hover,
+.form-right form textarea:hover,
+.form-right form input:focus,
+.form-right form textarea:focus {
+  border-color: #FF7A00;
+  box-shadow: 0 0 5px rgba(255,122,0,0.5);
+}
+
+.form-right form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #FF7A00;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Hover effect for button */
+.form-right form button:hover {
+  background-color: #e66b00;
+  transform: translateY(-2px);
+}
+
+.recaptcha-note {
+  font-size: 0.8rem;
+  color: #555;
+  margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CONTACT US SECTION */
+.contact-section {
+  padding: 80px 20px;
+  background-color: #f9f9f9;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+/* LEFT COLUMN */
+.contact-left {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-left h2 {
+  color: #FF7A00;
+  margin-bottom: 10px;
+}
+
+.contact-left p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.hotline-box {
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.hotline-box h3 {
+  color: #FF7A00;
+  margin-bottom: 10px;
+}
+
+.hotline-box p {
+  margin: 6px 0;
+  font-weight: 600;
+}
+
+/* RIGHT COLUMN */
+.contact-right {
+  flex: 1;
+  min-width: 250px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-right h2 {
+  color: #FF7A00;
+  margin-bottom: 20px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 0.9rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+form input:hover,
+form textarea:hover,
+form input:focus,
+form textarea:focus {
+  border-color: #FF7A00;
+  box-shadow: 0 0 5px rgba(255, 122, 0, 0.5);
+  outline: none;
+}
+
+form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #FF7A00;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+form button:hover {
+  background-color: #e66b00;
+  transform: translateY(-2px);
+}
+
+.recaptcha-note {
+  font-size: 0.8rem;
+  color: #555;
+  margin-top: 10px;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* DISCLAIMER SECTION */
+.disclaimer-section {
+  padding: 60px 20px;
+  background: #fff7f0;
+  color: #333;
+}
+
+.disclaimer-container {
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.7;
+  text-align: justify; /* ✅ Makes all paragraph text justified */
+}
+
+.disclaimer-container h2 {
+  text-align: center; /* ✅ Keep the title centered instead of justified */
+  color: #FF7A00;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.disclaimer-container h3 {
+  color: #FF7A00;
+  margin-top: 25px;
+  font-size: 1.1rem;
+}
+
+.disclaimer-container p {
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+  text-align: justify; /* ✅ Ensure all paragraph lines are aligned both sides */
+}
+
+.disclaimer-container a {
+  color: #FF7A00;
+  text-decoration: none;
+}
+
+.disclaimer-container a:hover {
+  text-decoration: underline;
+}
+
+
+
+/* Groundbreaking Hero Title */
+.groundbreaking-title {
+  text-align: center;       
+  margin: 0 auto 1rem auto;  /* Center and add space below */
+  padding:  1rem;          
+  max-width: 1000px;          /* Limit width so it doesn’t touch edges */
+}
+
+.groundbreaking-title h1 {
+  font-size: 1.1rem;        /* Smaller font size */
+  font-weight: 500;         
+  line-height: 1.3;         
+  color: BLACK;           
+  word-wrap: break-word;     /* Ensure long title wraps nicely */
+}
+/* ✨ Video Button Design (like Leader Title) */
+.video-button {
+  display: inline-block;
+  background-color: #ff7a00;        /* Orange background */
+  color: #fff;                       /* White text */
+  font-weight: 600;                  /* Semi-bold */
+  padding: 6px 18px;                 /* Vertical & horizontal padding */
+  border-radius: 25px;               /* Rounded edges */
+  margin-top: 1rem;                  /* Space above button */
+  text-decoration: none;             /* Remove underline */
+  box-shadow: 0 4px 10px rgba(255, 122, 0, 0.3); /* Soft shadow */
+  transition: all 0.3s ease;         /* Smooth hover effect */
+}
+
+/* Hover Effect */
+.video-button:hover {
+  background-color: #ff9900;         /* Slightly lighter orange */
+  transform: scale(1.05);            /* Slight grow effect */
+  cursor: pointer;
+}
+
+
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .groundbreaking-title h1 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .groundbreaking-title h1 {
+    font-size: 1.6rem;
+  }
 }

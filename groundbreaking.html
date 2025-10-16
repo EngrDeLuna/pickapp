@@ -1,12 +1,17 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>PICKAPP</title>
+  <link rel="icon" href="images/logo.png" type="image/png">
   <link rel="stylesheet" href="style.css">
-   <script src="script.js"></script>
+  <script src="script.js"></script>
+
 </head>
 
 <body>
@@ -25,10 +30,10 @@
       <li><a href="index.html">HOME</a></li>
       <li class="dropdown">
         <input type="checkbox" id="about-toggle" />
-        <label for="about-toggle" class="dropdown-link">ABOUT <span class="nav-arrow">v</span></label>
+        <label for="about-toggle" class="dropdown-link">ABOUT <span class="nav-arrow">▼</span></label>
         <ul class="dropdown-content">
           <li><a href="story.html">The Story Behind</a></li>
-          <li><a href="services.html">PICKAPP Services</a></li>
+          <li><a href="services.html ">PICKAPP Services</a></li>
           <li><a href="how-to-use.html">How to use?</a></li>
           <li><a href="operating-areas.html">Operating Areas</a></li>
           <li><a href="news.html">News</a></li>
@@ -37,7 +42,7 @@
 
       <li class="dropdown">
         <input type="checkbox" id="partner-toggle" />
-        <label for="partner-toggle" class="dropdown-link">BE OUR PARTNER <span class="nav-arrow">v</span></label>
+        <label for="partner-toggle" class="dropdown-link">BE OUR PARTNER <span class="nav-arrow">▼</span></label>
         <ul class="dropdown-content">
           <li><a href="pickapp-driver.html">PICKAPP Driver</a></li>
           <li><a href="pickapp-merchant.html">PICKAPP Merchant</a></li>
@@ -48,7 +53,7 @@
 
       <li class="dropdown">
         <input type="checkbox" id="more-toggle" />
-        <label for="more-toggle" class="dropdown-link">MORE <span class="nav-arrow">v</span></label>
+        <label for="more-toggle" class="dropdown-link">MORE <span class="nav-arrow">▼</span></label>
         <ul class="dropdown-content">
           <li class="has-children">
             <a href="#" class="parent-label">SUPPORT</a>
@@ -61,15 +66,13 @@
             <a href="#" class="parent-label">OUR POLICIES</a>
             <ul class="submenu">
               <li><a href="disclaimer.html">Disclaimer</a></li>
-              <li><a href="privacy-policy.html">Privacy Policy</a></li>
+              <li><a href="privacy-policy.html ">Privacy Policy</a></li>
               <li><a href="terms-and-condition.html">Terms and Conditions</a></li>
               <li><a href="#">FAQs</a></li>
             </ul>
           </li>
         </ul>
       </li>
-   
-
 
 
 
@@ -89,12 +92,6 @@
     </li>
   </ul>
 
-
-
-
-
-
-
     <div class="hamburger-icon">
       <span class="bar"></span>
       <span class="bar"></span>
@@ -104,26 +101,38 @@
 
 
 
-  <section class="brand-story">
-  <div class="brand-grid">
-    <!-- Left Side: Image -->
-    <div class="brand-image">
-      <img src="images/brand-story.png" alt="Our Brand Story">
+
+
+<!-- Hero Section -->
+<section class="groundbreaking-hero">
+  <!-- Hero Title -->
+  <div class="groundbreaking-title">
+    <h1>Revolutionizing Mobility: PICKAPP Hi-GO Electric Vehicle Showcase at the Huaihai New Energy 2024 Global Service Marketing Summit in China</h1>
+  </div>
+
+  <div class="gallery-container">
+    <!-- Big Image -->
+    <div class="gallery-main">
+      <img id="mainImage" src="images/groundbreaking1.png" alt="Main Image">
     </div>
 
-    <!-- Right Side: Text Description -->
-    <div class="brand-text">
-      <h3>Our Brand Story</h3>
-      <p>
-        <strong class="highlight">PICKAPP</strong> is just one of 
-        <strong class="highlight">Finasiatech's</strong> many plans so that all cities and municipalities 
-        in the Philippines can continue to rise above the state and keep pace with the progress of other cities.
-      </p>
-      <p>
-        We all started with difficulty. We know the life of queuing and riding a tricycle… We know the feeling… 
-        We have been given the ability to make an app for Filipinos, we will do it, for fellow Filipinos!
-      </p>
+    <!-- Thumbnails -->
+    <div class="gallery-thumbs">
+      <img src="images/groundbreaking1.png" alt="Thumbnail 1" onclick="changeImage(this)">
+      <img src="images/groundbreaking2.png" alt="Thumbnail 2" onclick="changeImage(this)">
+      <img src="images/groundbreaking3.png" alt="Thumbnail 3" onclick="changeImage(this)">
+      <img src="images/groundbreaking4.png" alt="Thumbnail 4" onclick="changeImage(this)">
+      <img src="images/groundbreaking5.png" alt="Thumbnail 5" onclick="changeImage(this)">
+      <img src="images/groundbreaking6.png" alt="Thumbnail 6" onclick="changeImage(this)">
+      <img src="images/groundbreaking7.png" alt="Thumbnail 7" onclick="changeImage(this)">
+      <img src="images/groundbreaking8.png" alt="Thumbnail 8" onclick="changeImage(this)">
+      <img src="images/groundbreaking9.png" alt="Thumbnail 9" onclick="changeImage(this)">
+      <img src="images/groundbreaking10.png" alt="Thumbnail 10" onclick="changeImage(this)">
     </div>
+
+    <!-- Navigation buttons -->
+    <button class="carousel-btn previous">&#10094;</button>
+    <button class="carousel-btn proceed">&#10095;</button>
   </div>
 </section>
 
@@ -131,117 +140,42 @@
 
 
 
-<section class="leader-profile">
 
-  <!-- 1️⃣ CEO - Image Left -->
-  <div class="leader-grid">
-    <div class="leader-image">
-      <img src="images/ceo.png" alt="Manuel E. Pangilinan - CEO & Founder">
-    </div>
 
-    <div class="leader-text">
-      <h2>Manuel E. Pangilinan</h2>
-      <h4 class="leader-title">CEO & FOUNDER</h4>
-      <p>
-        MBA Graduate from <span class="highlight">Ateneo De Manila University</span> with 
-        <span class="highlight">15 years of real estate sector experience</span> focused on retail space, 
-        office leasing and have arranged leases for over 
-        <span class="highlight">100,000 sqm space</span>. Crafted joint venture agreements, 
-        site acquisition and operational acquisition with total value of about 
-        <span class="highlight">PHP10 billion (c. USD200m)</span>.
-      </p>
-      <p>
-        Formed <span class="highlight">FLRC</span> in 2006 and <span class="highlight">FLDCC</span> in 2016 
-        to address the growth for built-to-suit demand of 
-        <span class="highlight">BPO office leasing requirements</span>.
-      </p>
+
+
+
+
+
+
+<!-- Video Section -->
+<section class="video-section side-layout">
+  <!-- Left Video Wrapper -->
+  <div class="video-wrapper">
+    <div class="video-container">
+      <!-- YouTube Video Embed -->
+      <iframe class="youtube-iframe" 
+              src="https://www.youtube.com/embed/yferOYmhw3A?start=3" 
+              data-src="https://www.youtube.com/embed/yferOYmhw3A?start=3" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              allowfullscreen>
+      </iframe>
     </div>
   </div>
 
-  <!-- 2️⃣ Director of Sales - Image Right -->
-  <div class="leader-grid reverse">
-    <div class="leader-text">
-      <h2>Carmela E. Pangilinan</h2>
-      <h4 class="leader-title">DIRECTOR OF SALES</h4>
+  <!-- Right Text Wrapper -->
+  <div class="video-wrapper">
+    <div class="achievement-text">
       <p>
-        BA degree holder from <span class="highlight">University of the Philippines</span> with 
-        <span class="highlight">25 years of experience</span> in the entertainment and advertising industry. 
-        Her expertise in <span class="highlight">conceptualization, planning, and implementation of sales and marketing strategies</span> 
-        for <span class="highlight">FinAsiaLand</span> enabled the company to stay abreast in the tough competition of the industry.
+        Highlights from the <strong class="highlight">International Session of HUAIHAI NEW ENERGY 2024 GLOBAL SERVICE MARKETING SUMMIT</strong>
       </p>
-    </div>
+      <!-- Button BELOW achievement-text -->
+    <a href="https://www.huaihaiglobal.com/news/successful-conclusion-highlights-from-the-international-session-of-huaihai-new-energy-2024-global-service-marketing-summit/" 
+   class="video-button" target="_blank" rel="noopener">
+  READ MORE
+</a>
 
-    <div class="leader-image">
-      <img src="images/sales.png" alt="Carmela E. Pangilinan - Director of Sales">
-    </div>
-  </div>
-
-  <!-- 3️⃣ Director of HR - Image Left -->
-  <div class="leader-grid">
-    <div class="leader-image">
-      <img src="images/hr.png" alt="Margarette E. Pangilinan - Director of Human Resource">
-    </div>
-
-    <div class="leader-text">
-      <h2>Margarette E. Pangilinan</h2>
-      <h4 class="leader-title">DIRECTOR OF HUMAN RESOURCE</h4>
-      <p>
-        MA degree holder in <span class="highlight">Psychology from the University of Santo Tomas</span>. 
-        She has <span class="highlight">14 years of experience</span> in various areas of Psychology such as 
-        <span class="highlight">Training, Education, Human Resource, and Mental Health</span>.
-      </p>
-    </div>
-  </div>
-
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section class="mission-vision">
-  <h2 class="section-title">Our Company's</h2>
-
-  <div class="mv-grid">
-    <!-- Mission -->
-    <div class="mv-item">
-    
-      <img src="images/mission.png" alt="Mission Image">
-      <p>
-        MISSION: To uplift the life and livelihood of the tricycle drivers in the Philippines through improved transport booking technology, vehicle and ecosystem modernization, and financial inclusion of the unbanked grassroot sector of the society.
-      </p>
-    </div>
-
-    <!-- Vision -->
-    <div class="mv-item">
-      <img src="images/vission.png" alt="Vision Image">
-      <p>
-        VISSION: Harnessing technology and business process to greatly contribute to growing nationwide economy on the daily transport and logistics concerns of the Filipino.
-      </p>
     </div>
   </div>
 </section>
@@ -272,36 +206,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
 
 <!-- DOWNLOAD SECTION -->
 <section class="download-section">
@@ -396,5 +300,8 @@
 
 
 
+
+
 </body>
+
 </html>
