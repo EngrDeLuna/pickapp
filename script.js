@@ -254,6 +254,56 @@ document.querySelectorAll('.hero-section').forEach((section) => {
       setTimeout(() => popup.style.display = "none", 300);
     });
   }
+
+
+  // -----------------------------
+// HIGHLIGHT ACTIVE NAV
+// -----------------------------
+const currentPage = window.location.pathname.split("/").pop();
+const menuLinks = document.querySelectorAll('.menu a');
+
+menuLinks.forEach(link => {
+  const href = link.getAttribute('href').trim();
+
+  // Skip empty/placeholder hrefs
+  if (href === "#" || href === "") return;
+
+  // Highlight the current page link
+  if (href === currentPage) {
+    link.classList.add('active');
+
+    // Open parent dropdown if exists
+    const dropdown = link.closest('.dropdown');
+    if (dropdown) {
+      const label = dropdown.querySelector('.dropdown-link');
+      const checkbox = dropdown.querySelector('input[type="checkbox"]');
+
+      if (label) label.classList.add('active-dropdown');
+      if (checkbox) checkbox.checked = true;
+      if (checkbox) updateArrow(checkbox); // make sure arrow shows ▲
+    }
+  }
+});
+
+
+// -----------------------------
+// FORCE ALL DROPDOWNS TO START CLOSED (AND RESET ARROWS)
+// -----------------------------
+window.addEventListener('pageshow', () => {
+  document.querySelectorAll('.dropdown input[type="checkbox"]').forEach(cb => {
+    cb.checked = false;
+    // Reset arrow to ▼
+    const label = cb.nextElementSibling;
+    if (label) {
+      const arrow = label.querySelector('.nav-arrow');
+      if (arrow) arrow.textContent = '▼';
+    }
+  });
+});
+
+
+
+
 });
 
 
@@ -329,6 +379,5 @@ function changeColor(color) {
     productImage.style.transform = 'scale(1)';
   }, 200);
 }
-
 
 

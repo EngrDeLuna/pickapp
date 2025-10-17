@@ -8,18 +8,22 @@ body {
   font-family: 'Open Sans', Arial, sans-serif;
 }
 
-
-
 /* ===== nav container ===== */
 nav {
   background-color: #e2e0db; /* White background */
   padding: 10px 25px;
-  position: relative;
-  display: flex;
-  justify-content: center;  /* This ensures nav is centered */
-  align-items: center;
+  position: fixed;       /* fixed at top */
+  top: 0;
+  left: 0;
   width: 100%;
+  display: flex;
+  justify-content: center;  
+  align-items: center;
+  z-index: 1000;         /* above content */
+  height: 70px;          /* set navbar height */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* optional shadow */
 }
+
 
 /* Person icon */
 .person-icon {
@@ -120,6 +124,15 @@ input[type="checkbox"] {
   background-color: transparent; /* No background color change */
 }
 
+.menu a.active {
+  font-weight: bold;
+  color: #ff9800;
+}
+
+.dropdown-link.active-dropdown {
+  font-weight: bold;
+  color: #ff9800;
+}
 
 /* ===== arrow (inline with text) ===== */
 .dropdown-link .nav-arrow {
@@ -203,6 +216,7 @@ input[type="checkbox"] {
 
 .submenu a:hover { color: black; }
 .hero-section {
+    margin-top: 70px;
   padding: 50px 0; /* Add spacing at top and bottom */
   text-align: center; /* Center the carousel content */
   color: white; /* Keep white text if you plan to add overlay text later */
@@ -307,10 +321,15 @@ input[type="checkbox"] {
 @media (max-width: 768px) {
 
 
-  nav {
-    justify-content: flex-start; /* Align everything to the left */
-    padding: 20px; /* Optional: reduce padding */
-    position: relative;
+   nav {
+    justify-content: flex-start;
+    padding: 10px 15px;       /* smaller padding to reduce height */
+    position: fixed;          /* make it stay in place */
+    top: 0;                   /* align to screen top */
+    left: 0;
+    width: 100%;
+    background-color: #e2e0db;
+    z-index: 9999;
   }
 
   .gallery-main {
@@ -405,7 +424,7 @@ input[type="checkbox"] {
 .hamburger-icon {
   display: block;
   position: fixed;
-  top: 25px;
+  top: 15px;
   right: 25px;
   z-index: 10000;
   cursor: pointer;
@@ -1847,6 +1866,7 @@ footer {
 
 /* THE STORY BEHIND */
 .brand-story {
+    margin-top: 70px;
   padding: 80px 10%;
   background-color: #ffffff;
    font-family: 'Open Sans', Arial, sans-serif;
@@ -2238,6 +2258,7 @@ footer {
   padding: 4rem 2%; /* Small padding to prevent edge cut-off */
   max-width: 1200px; /* Limit total width */
   margin: 0 auto; /* Centers the whole section */
+    margin-top: 70px;
 }
 
 /* Left Video Wrapper */
@@ -2577,6 +2598,7 @@ footer {
   justify-content: center;
   align-items: center;
   padding: 4rem 1rem;
+    margin-top: 70px;
 }
 
 /* Image card wrapper */
@@ -2836,6 +2858,7 @@ footer {
   padding: 4rem 1rem;
   background-color: #fff;
  font-family: 'Open Sans', Arial, sans-serif;
+   margin-top: 70px;
 }
 
 .news-grid {
@@ -2965,6 +2988,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+    margin-top: 70px;
   
 }
   
@@ -3335,6 +3359,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+    margin-top: 70px;
 }
 
 .merchant-container {
@@ -3593,7 +3618,7 @@ footer {
 }
 
 #color-selector-section h2 {
-    color: #FFA500;                   /* main text color */
+    color: black;                   /* main text color */
     font-size: 24px;
     line-height: 1.4;
     text-align: center;
@@ -3905,7 +3930,7 @@ footer {
 /* Media Queries for Smaller Screens */
 @media screen and (max-width: 1024px) {
   .corner-image { width: 100px; }  
-  #color-selector-section h2 { font-size: 22px; }
+  #color-selector-section h2 { font-size: 22px; color: black; }
   #vehicle-specs h2 { font-size: 24px; }
 }
 
@@ -3972,7 +3997,7 @@ footer {
         width: 80%; /* take more of the small screen width */
         max-width: 200px;
     }
-  #color-selector-section h2 { font-size: 20px; }
+  #color-selector-section h2 { font-size: 20px; color: black; }
   #vehicle-specs h2 { font-size: 20px; }
   .spec-cards {
     grid-template-columns: 1fr;
@@ -4012,6 +4037,7 @@ footer {
 /* HIRING SECTION */
 .hiring-section {
   padding: 80px 20px;
+    margin-top: 70px;
 }
 
 .hiring-container {
@@ -4149,6 +4175,7 @@ footer {
 .contact-section {
   padding: 80px 20px;
   background-color: #f9f9f9;
+    margin-top: 70px;
 }
 
 .contact-container {
@@ -4276,6 +4303,7 @@ form button:hover {
   padding: 60px 20px;
   background: #fff7f0;
   color: #333;
+    margin-top: 70px;
 }
 
 .disclaimer-container {
