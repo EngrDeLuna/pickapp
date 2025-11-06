@@ -6,7 +6,10 @@
 
 body {
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
+   font-family: 'Roboto', Arial, sans-serif;
+}
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* ===== nav container ===== */
@@ -231,22 +234,27 @@ input[type="checkbox"] {
 
 
 
-
-/* ===== GALLERY CONTAINER ===== */
 .gallery-container {
   position: relative;
-  max-width: 1200px; /* limit actual width */
-  width: 85%;        /* responsive shrink */
-   margin: 2px auto 40px;
+  max-width: 1200px;
+  width: 85%;
+  margin: 2px auto 40px;
   padding: 20px;
   border-radius: 20px;
-  background-color: #fff;
-  box-shadow: 0 4px 20px rgba(36, 35, 35, 0.1);
+
+  /* Transparent + blur background */
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+
+  /* Shadow for depth */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 
 /* Main image container */
 .gallery-main {
@@ -2854,7 +2862,6 @@ footer {
   display: inline-block;
   background-color: #ff9900;
   color: #fff;
- font-family: 'Open Sans', Arial, sans-serif;
   font-weight: 600;
   padding: 0.5rem 1rem;
   border-radius: 20px;
@@ -4040,18 +4047,33 @@ footer {
 
 
 
-
-
-
-
-
-
-
-
 /* HIRING SECTION */
 .hiring-section {
   padding: 80px 20px;
-    margin-top: 70px;
+  margin-top: 70px;
+
+  /* Optional: add a background image like contact section */
+  background-image: url('images/form-bg.png'); /* replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.hiring-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.6); /* light overlay for readability */
+  z-index: 1;
+}
+
+.hiring-section * {
+  position: relative;
+  z-index: 2; /* ensure text/content is above overlay */
 }
 
 .hiring-container {
@@ -4060,12 +4082,19 @@ footer {
   gap: 40px;
   max-width: 900px;
   margin: 0 auto;
+  align-items: flex-start;
 }
 
 /* LEFT COLUMN: Open Positions */
 .positions-left {
   flex: 1;
   min-width: 300px;
+
+  /* Semi-transparent like contact-left */
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
 }
 
 .positions-left h2 {
@@ -4074,12 +4103,11 @@ footer {
 }
 
 .positions-left p {
-  margin-bottom: 20px;
   font-size: 1rem;
   line-height: 1.5;
+  margin-bottom: 20px;
 }
 
-/* Positions list */
 .positions-left ul {
   list-style: disc;
   padding-left: 20px;
@@ -4093,7 +4121,6 @@ footer {
   cursor: default;
 }
 
-/* Hover effect for positions items */
 .positions-left ul li:hover {
   color: #FF7A00;
   transform: translateX(5px);
@@ -4115,11 +4142,13 @@ footer {
 /* RIGHT COLUMN: Form */
 .form-right {
   flex: 1;
-  min-width: 200px;
-  background: #fff;
+  min-width: 250px;
+
+  /* Semi-transparent like contact-right */
+  background-color: rgba(255, 255, 255, 0.5);
   padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
 }
 
 .form-right h2 {
@@ -4132,19 +4161,18 @@ footer {
   width: 100%;
   padding: 12px;
   margin-bottom: 15px;
-  border-radius: 5px;
+  border-radius: 20px;
   border: 1px solid #ccc;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-/* Hover/focus effect for inputs and textarea */
 .form-right form input:hover,
 .form-right form textarea:hover,
 .form-right form input:focus,
 .form-right form textarea:focus {
   border-color: #FF7A00;
-  box-shadow: 0 0 5px rgba(255,122,0,0.5);
+  box-shadow: 0 0 5px rgba(255, 122, 0, 0.5);
 }
 
 .form-right form button {
@@ -4159,7 +4187,6 @@ footer {
   transition: background-color 0.3s, transform 0.2s;
 }
 
-/* Hover effect for button */
 .form-right form button:hover {
   background-color: #e66b00;
   transform: translateY(-2px);
@@ -4169,15 +4196,8 @@ footer {
   font-size: 0.8rem;
   color: #555;
   margin-top: 10px;
+  text-align: center;
 }
-
-
-
-
-
-
-
-
 
 
 
@@ -4189,8 +4209,35 @@ footer {
 .contact-section {
   padding: 80px 20px;
   background-color: #f9f9f9;
-    margin-top: 70px;
+  margin-top: 70px;
+
+  /* Add background image */
+  background-image: url('images/form-bg.png'); /* replace with your image path */
+  background-size: cover;       /* make it cover the whole section */
+  background-position: center;  /* center the image */
+  background-repeat: no-repeat; /* prevent tiling */
+  /* Optional: add overlay for better readability */
+  position: relative;
 }
+
+.contact-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.6); /* light overlay to keep text readable */
+  z-index: 1;
+}
+
+.contact-section * {
+  position: relative;
+  z-index: 2; /* ensure text/content is above overlay */
+}
+
+
+
 
 .contact-container {
   display: flex;
@@ -4205,6 +4252,10 @@ footer {
 .contact-left {
   flex: 1;
   min-width: 300px;
+   background-color: rgba(255, 255, 255, 0.5); /* white with 70% opacity */
+   padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
 }
 
 .contact-left h2 {
@@ -4221,7 +4272,7 @@ footer {
 .hotline-box {
   padding: 10px;
   border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .hotline-box h3 {
@@ -4233,16 +4284,19 @@ footer {
   margin: 6px 0;
   font-weight: 600;
 }
-
 /* RIGHT COLUMN */
 .contact-right {
   flex: 1;
   min-width: 250px;
-  background: #fff;
+
+  /* Semi-transparent background */
+  background-color: rgba(255, 255, 255, 0.5); /* white with 70% opacity */
+  
   padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
 }
+
 
 .contact-right h2 {
   color: #FF7A00;
@@ -4254,7 +4308,7 @@ form textarea {
   width: 100%;
   padding: 12px;
   margin-bottom: 15px;
-  border-radius: 5px;
+  border-radius: 20px;
   border: 1px solid #ccc;
   font-size: 0.9rem;
   transition: border-color 0.3s, box-shadow 0.3s;
@@ -4267,6 +4321,7 @@ form textarea:focus {
   border-color: #FF7A00;
   box-shadow: 0 0 5px rgba(255, 122, 0, 0.5);
   outline: none;
+
 }
 
 form button {
@@ -4354,6 +4409,17 @@ form button:hover {
 .disclaimer-container a:hover {
   text-decoration: underline;
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
