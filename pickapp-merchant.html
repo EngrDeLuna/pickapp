@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -288,4 +289,295 @@
 
 
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PICKAPP</title>
+  <link rel="stylesheet" href="style.css">
+   <script src="script.js"></script>
+</head>
+
+<body>
+
+  <!-- Navigation menu -->
+  <nav>
+
+
+
+    <div class="logo-container">
+    <img src="images/logo.png" alt="PICKAPP Logo" class="logo" />
+    </div>
+
+
+    <ul class="menu" id="menu">
+      <li><a href="index.html">HOME</a></li>
+      <li class="dropdown">
+        <input type="checkbox" id="about-toggle" />
+        <label for="about-toggle" class="dropdown-link">ABOUT <span class="nav-arrow">v</span></label>
+        <ul class="dropdown-content">
+          <li><a href="story.html">The Story Behind</a></li>
+          <li><a href="services.html">PICKAPP Services</a></li>
+          <li><a href="how-to-use.html">How to use?</a></li>
+          <li><a href="operating-areas.html">Operating Areas</a></li>
+          <li><a href="news.html">News</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <input type="checkbox" id="partner-toggle" />
+        <label for="partner-toggle" class="dropdown-link">BE OUR PARTNER <span class="nav-arrow">v</span></label>
+        <ul class="dropdown-content">
+          <li><a href="pickapp-driver.html">PICKAPP Driver</a></li>
+          <li><a href="pickapp-merchant.html">PICKAPP Merchant</a></li>
+        </ul>
+      </li>
+
+      <li><a href="our-product.html">OUR PRODUCT</a></li>
+
+      <li class="dropdown">
+        <input type="checkbox" id="more-toggle" />
+        <label for="more-toggle" class="dropdown-link">MORE <span class="nav-arrow">v</span></label>
+        <ul class="dropdown-content">
+          <li class="has-children">
+            <a href="#" class="parent-label">SUPPORT</a>
+            <ul class="submenu">
+              <li><a href="quick-links.html">Quick Links</a></li>
+              <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+          </li>
+          <li class="has-children">
+            <a href="#" class="parent-label">OUR POLICIES</a>
+            <ul class="submenu">
+              <li><a href="disclaimer.html">Disclaimer</a></li>
+              <li><a href="privacy-policy.html">Privacy Policy</a></li>
+              <li><a href="terms-and-condition.html">Terms and Conditions</a></li>
+              <li><a href="#">FAQs</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+  
+
+
+
+
+
+
+    
+
+    
+    <!-- PERSON ICON + Sign In -->
+    <li class="dropdown person-dropdown">
+      <input type="checkbox" id="person-toggle" />
+      <label for="person-toggle" class="dropdown-link">
+        <img src="images/person-icon.png" alt="Person Icon" class="person-icon" />
+      </label>
+      <ul class="dropdown-content">
+        <li><a href="admin-login.php">Sign In</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  
+
+
+    <div class="hamburger-icon">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </nav>
+
+
+
+
+  <!-- MERCHANT HERO / HEADER SECTION -->
+<section class="merchant" aria-labelledby="merchantTitle">
+  <div class="merchant-container">
+    <h2 id="merchantTitle" class="merchant-title">Grow Your Business with PICKAPP</h2>
+    <p class="merchant-subtitle">
+      Join the PICKAPP Merchant Network! Register, submit your documents, and start selling online to reach more customers effortlessly.
+    </p>
+    <div class="merchant-cta-row">
+      <a class="merchant-cta" href="#apply">Get Started</a>
+      <a class="merchant-cta merchant-cta-outline" href="#merchant-requirements">See Merchant</a>
+    </div>
+  </div>
+</section>
+
+<!-- 🟢 MERCHANT CARDS (2x2 Layout) -->
+<section id="merchant-requirements" class="merchant-cards-section">
+
+  <!-- 1️⃣ Manual Registration -->
+  <div class="merchant-card">
+    <div class="merchant-image-container">
+      <img src="images/merchant-download.png" alt="Merchant Image">
+    </div>
+    <h3 class="merchant-card-title">Manual Registration</h3>
+    <a class="btn-orange" href="https://drive.google.com/file/d/1fcP_WVo-Umx62YNt1pYAyypgkJQ6XRcC/view" target="_blank">
+      Download Here
+    </a>
+  </div>
+
+  <!-- 2️⃣ Actual Registration -->
+  <div class="merchant-card">
+    <div class="merchant-image-container">
+      <img src="images/merchant-register.png" alt="Documents Image">
+    </div>
+    <h3 class="merchant-card-title">Actual Registration</h3>
+    <a class="btn-orange" href="https://docs.google.com/forms/d/e/1FAIpQLSf0yJZUeOLZdsy3_AjG7ONf1xVPaev-Z0kfioJ5ogC4Vwl2fA/viewform" target="_blank">
+      Register Here
+    </a>
+  </div>
+
+  <!-- 3️⃣ LGU Modal -->
+  <div class="merchant-card">
+    <div class="merchant-image-container">
+      <img src="images/merchant-lgu.png" alt="Merchant Apply Image">
+    </div>
+    <h3 class="merchant-card-title">LGU</h3>
+    <button class="btn-orange" id="openLGUModal">Click Here</button>
+  </div>
+
+  <!-- 4️⃣ Merchant Modal -->
+  <div class="merchant-card">
+    <div class="merchant-image-container">
+      <img src="images/merchant.png" alt="Exam Image">
+    </div>
+    <h3 class="merchant-card-title">Merchant</h3>
+    <button class="btn-orange" id="openMerchantModal">Click Here</button>
+  </div>
+</section>
+
+<!-- 🟢 LGU Modal -->
+<div id="lguModal" class="merchant-modal">
+  <div class="merchant-modal-content">
+    <span class="close-modal">&times;</span>
+    <h2 class="modal-title">Local Government Unit (LGU)</h2>
+    <p>
+      • Make commuter life easier and safer<br>
+      • Transform physical queue to digital queue<br>
+      • Manage physical distancing and contact tracing<br>
+      • Collect taxes across all income earners<br>
+      • Manage traffic and road accidents<br>
+      • Provide livelihood to constituents
+    </p>
+  </div>
+</div>
+
+<!-- 🟢 Merchant Modal -->
+<div id="merchantModal" class="merchant-modal">
+  <div class="merchant-modal-content">
+    <span class="close-modal">&times;</span>
+    <h2 class="modal-title">Merchant Partnership</h2>
+    <p>
+      • Continuous revenue for merchants — hassle-free<br>
+      • Business accounting and community management<br>
+      • Transformation to Smart City with online marketing<br>
+      • No extra staff required for smooth service
+    </p>
+  </div>
+</div>
+
+
+
+<!-- DOWNLOAD SECTION -->
+<section class="download-section">
+  <div class="download-container">
+
+    
+    <!-- LEFT SIDE -->
+    <div class="download-left">
+      <div class="download-left-flex">
+
+
+        <!-- Text & Buttons -->
+        <div class="download-text">
+          <h2 class="download-title">Download the App</h2>
+          <div class="download-buttons">
+            <a href="#" class="download-btn">
+              <img src="images/googleplay.png" alt="Google Play" class="btn-img">
+            </a>
+            <a href="#" class="download-btn">
+              <img src="images/appstore.png" alt="App Store" class="btn-img">
+            </a>
+          </div>
+        </div>
+
+        <!-- Logo on the right -->
+        <div class="download-logo">
+          <img src="images/app-logo.png" alt="App Logo" class="app-logo">
+        </div>
+      </div>
+    </div>
+
+
+
+
+<div class="download-right">
+  <h2 class="follow-title">Follow Us</h2>
+  <div class="social-icons">
+    <div class="social-item facebook">
+      <img src="images/facebook.png" alt="Facebook">
+      <div class="social-hover">
+        <span>Facebook</span>
+      </div>
+    </div>
+    <div class="social-item messenger">
+      <img src="images/messenger.png" alt="Messenger">
+      <div class="social-hover">
+        <span>Messenger</span>
+      </div>
+    </div>
+    <div class="social-item instagram">
+      <img src="images/ig.png" alt="Instagram">
+      <div class="social-hover">
+        <span>Instagram</span>
+      </div>
+    </div>
+    <div class="social-item tiktok">
+      <img src="images/tiktok.png" alt="TikTok">
+      <div class="social-hover">
+        <span>TikTok</span>
+      </div>
+    </div>
+    <div class="social-item twitter">
+      <img src="images/twitter.png" alt="Twitter">
+      <div class="social-hover">
+        <span>Twitter</span>
+      </div>
+    </div>
+    <div class="social-item youtube">
+      <img src="images/youtube.png" alt="YouTube">
+      <div class="social-hover">
+        <span>YouTube</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+</section>
+
+
+
+
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <p>Ayala Technohub, Dillman Quezon City, Philippines</p>
+  <p>© PICKAPP 2024</p>
+</footer>
+
+
+
+
+
+
+</body>
+>>>>>>> f9ae7d780d93e2f743ef5a45558b2b9ed2fde174
 </html>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* ===== base ===== */
 * {
   box-sizing: border-box;
@@ -803,3 +804,810 @@ footer {
   }
 }
 
+=======
+/* ===== base ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+ font-family: 'Open Sans', sans-serif;
+}
+
+/* ===== nav container ===== */
+nav {
+  background-color: #fff; /* White background */
+  padding: 30px 25px;
+  position: relative;
+  display: flex;
+  justify-content: center;  /* This ensures nav is centered */
+  align-items: center;
+  width: 100%;
+}
+
+/* Hide checkboxes used for toggles */
+input[type="checkbox"] {
+  display: none;  /* Hide checkboxes */
+}
+
+/* Logo container in the navigation */
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-right: -5px; /* Space between the logo and the menu items */
+  padding-left: 20px; /* Adds space to the left of the logo */
+}
+
+/* Logo image styling */
+.logo {
+  width: 50px; /* Adjust the width of the logo */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* ===== main menu (horizontal) ===== */
+.menu {
+  list-style: none;
+  margin: 0;
+  display: flex;            /* Horizontal layout */
+  gap: 25px;                /* Spacing between items */
+  align-items: center;
+  justify-content: center;  /* Ensure the items stay centered */
+  position: relative; /* Ensure the menu stays centered when dropdowns open */
+  width: 100%;  /* Ensure full width for centering */
+}
+
+/* Each top-level item */
+.menu > li {
+  position: relative;
+  white-space: nowrap;
+  padding: 0 10px;
+}
+
+/* Normal link style */
+.menu a,
+.dropdown-link {
+  color: #000;  /* Default text color is black */
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 6px 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition */
+  position: relative; /* Allow pseudo-elements to be positioned */
+}
+
+/* Underline effect (line) */
+.menu a::after,
+.dropdown-link::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0;
+  background: #ff9800; /* Orange underline */
+  position: absolute;
+  bottom: -4px; /* Position the line below the text */
+  left: 0;
+  transition: width 0.22s ease;
+}
+
+/* Hover effect for links: change text and underline */
+.menu a:hover::after,
+.dropdown-link:hover::after {
+  width: 100%; /* Underline appears */
+}
+
+.menu a:hover,
+.dropdown-link:hover {
+  color: #ff9800; /* Text turns orange on hover */
+  background-color: transparent; /* No background color change */
+}
+
+/* ===== arrow (inline with text) ===== */
+.dropdown-link .arrow {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 1;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.dropdown-link:hover .arrow {
+  color: #ff9800; /* Arrow color changes to orange on hover */
+}
+
+/* When its checkbox is checked, we will handle arrow via JS (text) and optionally rotate */
+.dropdown input[type="checkbox"] + .dropdown-link {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* ===== dropdown content (first level) ===== */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: calc(100% + 10px); /* Gap below nav */
+  left: 0;
+  background: rgb(240,240,240);
+  min-width: 220px;
+  border-radius: 6px;
+  padding: 8px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+  z-index: 999;
+  flex-direction: column;
+}
+
+/* Open when its toggle (checkbox) is checked - CSS fallback (JS also manages) */
+.dropdown input[type="checkbox"]:checked ~ .dropdown-content {
+  display: flex;
+}
+
+/* Dropdown items */
+.dropdown-content > li {
+  list-style: none;
+  margin: 6px 0;
+}
+
+/* Dropdown links style */
+.dropdown-content a {
+  color: #222;
+  text-decoration: none;
+  display: block;
+  padding: 8px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* Hover inside dropdown */
+.dropdown-content a:hover {
+  background: #ff9900;
+  color: #000;
+}
+
+/* ===== submenu inside MORE (always visible when MORE opens) ===== */
+.has-children { margin: 4px 0; }
+
+.submenu {
+  list-style: none;
+  padding-left: 14px; /* Indent */
+  margin-top: 6px;
+}
+
+.submenu li { margin: 4px 0; }
+
+.submenu a {
+  font-size: 13px;
+  color: #333;
+  padding: 6px 8px;
+}
+
+.submenu a:hover { color: black; }
+
+.hero-section {
+  background-color:aliceblue;
+  padding: 50px 0; /* Add some padding for spacing */
+  text-align: center; /* Align text in the center */
+  color: white; /* Set text color to white to contrast with the gradient */
+}
+
+/* ===== carousel container styles ===== */
+.carousel-container {
+  position: relative; /* Allow proper positioning of navigation arrows */
+  max-width: 80%; /* Adjust the width of the carousel */
+  margin: 20px auto; /* Center the carousel */
+  overflow: hidden; /* Hide overflow content */
+  padding: 10px;
+  background-color: #ff9900;
+  border-radius: 15px; /* Make the corners rounded (adjust the value as needed) */
+  border: 5px solid #d45202; /* Add a border around the carousel container (adjust color and width as needed) */
+}
+
+
+.carousel-images {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  padding: 0 8px;
+}
+
+/* ===== carousel navigation (outside the carousel container) ===== */
+.carousel-nav {
+  position: absolute; /* Absolute positioning outside the carousel container */
+  top: 50%; /* Vertically center the arrows relative to the carousel */
+  transform: translateY(-50%); /* Ensure arrows are centered vertically */
+  z-index: 1000; /* Ensure arrows are above carousel images */
+  display: flex;
+  justify-content: space-between;
+  width: 100%; /* Full width of the carousel container */
+  padding: 0 20px; /* Padding for spacing on left and right */
+}
+
+
+
+/* ===== carousel dots styles ===== */
+.carousel-dots {
+  position: absolute;
+  bottom: 10px; /* Place dots near the bottom of the carousel */
+  left: 50%;
+  transform: translateX(-50%); /* Center horizontally */
+  display: flex;
+  gap: 10px;
+}
+
+.carousel-dots .dot {
+  width: 15px;
+  height: 15px;
+  background-color: #252222; /* Light gray for inactive dots */
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-dots .dot.active {
+  background-color: #ff9900; /* Orange color for the active dot */
+}
+
+
+/* Styling for navigation buttons */
+.prev, .next {
+  background-color: rgba(0, 0, 0, 0.5); /* Default background */
+  color: white; /* Text color */
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 20px;
+  pointer-events: auto; /* Make the arrows clickable */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.prev:hover, .next:hover {
+  background-color: #ff9900; /* Orange background on hover */
+  box-shadow: 0 0 10px rgba(255, 152, 0, 0.7); /* Shadow effect on hover */
+  transform: scale(1.1); /* Slightly enlarge the button on hover */
+}
+
+/* Position the arrows at the left and right edge of the carousel container */
+.prev {
+  position: absolute;
+  left: 10px; /* Position the left arrow near the left edge */
+  top: 50%;
+  transform: translateY(-50%); /* Center vertically */
+}
+
+.next {
+  position: absolute;
+  right: 10px; /* Position the right arrow near the right edge */
+  top: 50%;
+  transform: translateY(-50%); /* Center vertically */
+}
+
+/* ===== hide carousel-nav on mobile devices ===== */
+@media (max-width: 768px) {
+  .carousel-nav {
+    display: none; /* Hide the arrows on mobile devices */
+  }
+
+  .carousel-container {
+    max-width: 100%; /* Full width on smaller screens */
+    padding: 8px;
+  }
+
+
+
+
+  .menu {
+    flex-direction: column;  /* Stack items vertically on smaller screens */
+    gap: 10px;                /* Adjust spacing between items */
+    display: none;            /* Hide the menu by default */
+    align-items: center;      /* Ensure the menu is centered */
+    justify-content: center;
+  }
+
+  /* Ensure dropdown content is still aligned left */
+  .dropdown-content {
+    left: 0; /* Align to the left */
+    position: static; /* For static dropdowns in mobile */
+  }
+
+ 
+
+  .submenu {
+    padding-left: 20px;
+  }
+
+  .submenu a {
+    color: #fff;
+  }
+
+  /* Hamburger icon styles */
+  .hamburger-icon {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    z-index: 1000;
+  }
+
+  .hamburger-icon .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: #333;
+  }
+
+  .menu.active {
+    display: flex; /* Show the menu when it's active */
+  }
+
+  .hamburger-icon.active .bar:nth-child(1) {
+    transform: rotate(45deg);
+    position: relative;
+    top: 8px;
+  }
+
+  .hamburger-icon.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger-icon.active .bar:nth-child(3) {
+    transform: rotate(-45deg);
+    position: relative;
+    top: -8px;
+  }
+}
+
+/* Full Page Background (covers the entire page) */
+.full-page-background {
+  background-color: rgb(25, 25, 25); /* Black background for the entire page */
+  color: white; /* Make text white */
+  padding: 20px 0; /* Add padding to the top and bottom */
+  width: 100%;
+  min-height: 100vh; /* Ensure the background covers at least the full height of the screen */
+}
+
+
+/* General styles for the video section */
+.video-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+  gap: 20px; /* Space between videos */
+  justify-items: center;
+  align-items: start; /* Align at the top of the container */
+  margin: 50px;
+  padding: 0 40px; /* Added padding to ensure space on the sides */
+  box-sizing: border-box;
+
+  
+}
+
+/* Wrapper for each video and its title */
+.video-wrapper {
+  display: flex;
+  flex-direction: column; /* Stack video and title vertically */
+  align-items: center;
+  width: 100%;
+  max-width: 500px; /* Limit the max width */
+  margin-bottom: 20px;
+}
+
+/* Style for each video container */
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  margin: 0 auto; /* Center the videos */
+  border: 3px solid transparent;
+  border-radius: 8px;
+}
+
+/* Aspect ratio container to maintain consistent size */
+.video-container::before {
+  content: "";
+  display: block;
+  padding-top: 56.25%; /* 16:9 aspect ratio */
+}
+
+/* The iframe should cover the area */
+.youtube-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Hover effect on the container */
+.video-container:hover {
+  transform: scale(1.05);
+  border: 3px solid orange;
+  box-shadow: 0 4px 20px rgba(255, 69, 0, 0.7);
+}
+
+/* General styling for video titles */
+.video-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: orange;
+  text-align: center;
+  margin-top: 15px;
+  padding: 0 10px;
+  max-width: 90%;
+}
+
+/* General styles for the achievement text */
+.achievement-text {
+  margin-top: 20px;
+  font-size: 16px;
+  color: white;
+  padding: 0 10px;
+  max-width: 90%;
+  text-align: center;
+}
+
+/* Highlight text with orange color */
+.highlight {
+  font-weight: bold;
+  color: orange;
+}
+
+
+/* Heading styles for achievement section */
+.achievement-text h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+/* Style for unordered list (bullet points) */
+.achievement-text ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  color: WHITE;
+}
+
+/* Styling for list items */
+.achievement-text ul li {
+  margin-bottom: 5px;
+  line-height: 1.6;
+}
+
+/* Styling for footer */
+footer {
+  font-size: 14px;
+  color: white;
+  margin-top: 20px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .video-section {
+    grid-template-columns: 1fr; /* Stack videos vertically */
+    padding: 0 10px;
+  }
+
+  .video-wrapper {
+    width: 100%; /* Make video-wrapper take full width */
+  }
+
+  .video-title {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+
+  .achievement-text {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+
+  .achievement-text h3 {
+    font-size: 16px;
+  }
+
+  .achievement-text ul {
+    margin-left: 15px;
+  }
+}
+
+/* Styling for the Read More button */
+.read-more-container {
+  text-align: center; /* Center the button */
+  margin-top: 15px; /* Space above the button */
+}
+
+.read-more-btn {
+  
+  background-color: #FF3B30; /* Light orange background */
+  color: white; /* White text */
+  font-size: 16px;
+  padding: 12px 30px; /* Vertical and horizontal padding for size */
+  border: 2px solid #ffffff; /* Increased border thickness to make it more visible */
+  border-radius: 30px; /* Round shape */
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition */
+  font-weight: bold;
+  text-transform: uppercase; /* Make the text uppercase */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: adds shadow for effect */
+}
+
+/* Hover effect: Change background to orange and text to white */
+.read-more-btn:hover {
+  background-color: #FF8C00; /* Darker orange */
+  border: 2px solid #ff9900; /* Increased border thickness to make it more visible */
+  color: black; /* White text */
+}
+
+/* Focus style for accessibility (when clicked or selected) */
+.read-more-btn:focus {
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 0 3px rgba(255, 140, 0, 0.5); /* Add custom focus outline */
+}
+
+/* Grid Section */
+.grid-section {
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  flex-direction: column; /* Align content vertically */
+  min-height: 100vh; /* Ensure it takes full viewport height */
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 50px 20px;
+  width: 100%;
+  box-sizing: border-box; /* Prevent padding from affecting the layout */
+}
+
+
+
+
+/* Container to align the title and header section vertically */
+.vertical-align-container {
+  display: flex;
+  flex-direction: column; /* Stack the items vertically */
+  justify-content: center; /* Center the items vertically */
+  align-items: center; /* Center the items horizontally */
+  height: 100vh; /* Full height of the viewport */
+  margin: 0; /* Remove default margin */
+}
+
+/* Container to align the title and header section horizontally */
+.horizontal-align-container {
+  display: flex;
+  align-items: center; /* Vertically center the items */
+  justify-content: flex-start; /* Align items to the left */
+  height: 120px; /* Set the container height */
+  padding-left: 150px; /* Optional: Adds padding to the left of the container */
+  padding-top: 50px;
+}
+
+/* Header Section Styling */
+.header-section {
+  width: 100px; /* Set the width to 100px */
+  height: 100px; /* Set the height to 100px */
+  background-image: url('images/latest.png'); /* Add background image */
+  background-size: cover; /* Cover the entire container */
+  background-position: center; /* Center the image */
+  display: flex;
+  justify-content: center; /* Horizontally center the text */
+  padding: 0; /* No extra padding */
+  margin-left: 20px; /* Space between the title and header section */
+}
+
+/* Title Styling */
+.title-orange {
+  color: orange; /* Set the color of the title to orange */
+  font-size: 40px; /* Adjust font size to fit the container */
+  margin: 0; /* Remove margin */
+  text-shadow: 4px 4px 6px rgba(255, 111, 0, 0.3); /* Add shadow effect */
+}
+
+
+
+
+/* Grid Container */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
+  justify-items: center; /* Center items horizontally */
+  max-width: 1200px; /* Max width for grid */
+  width: 100%; /* Full width */
+  padding: 0 40px;
+  grid-column-gap: 20px; /* Gap between columns */
+  grid-row-gap: 30px; /* Gap between rows */
+  margin: 0 auto; /* Ensure the grid is centered horizontally */
+}
+
+/* Grid Item */
+.grid-item {
+  background-color: #ffffff; /* White background */
+  width: 100%; /* Full width */
+  max-width: 280px; /* Max width of the grid item */
+  height: 520px; /* Height of the grid item */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 10px #FFA500; /* Light shadow */
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+  cursor: pointer; /* Make grid-item clickable */
+}
+
+.grid-item:hover {
+  box-shadow: 0 4px 20px rgba(255, 69, 0, 0.7); /* Red-orange shadow on hover */
+  transform: scale(1.05); /* Slightly increase the size to create a "pop" effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+/* Image Container */
+.image-container {
+  width: 100%;
+  height: 260px; /* Image height */
+  margin-bottom: 20px; /* Space between image and title */
+}
+
+.grid-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px; /* Rounded corners for image */
+}
+
+/* Title Styling */
+.title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #FF3B30; /* Orange color */
+  margin-bottom: 15px;
+  text-align: center;  /* Justify the text */
+  text-justify: inter-word;  /* Optional: Specifies how words are spaced */
+}
+
+.description {
+  background-color: white;
+  border-radius: 8px;
+  padding: 4px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px #FFA500;
+  font-size: 14px;
+  color: black;
+  height: 100px;
+  overflow: hidden;
+  text-align: justify;  /* Justify the text */
+  text-justify: inter-word;  /* Optional: Specifies how words are spaced */
+}
+
+/* Button Container */
+.button-container {
+  text-align: center;
+}
+
+/* Find Out More Button */
+.find-more-btn {
+  background-color: #FF3B30; /* Light orange background */
+  color: white;
+  font-size: 16px;
+  padding: 12px 25px;
+  border: 2px solid #FFA500; /* Border color matching the background */
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Hover Effect for the Button */
+.find-more-btn:hover {
+  background-color: #FF8C00;
+  border-color: #FF8C00;
+}
+
+
+/* Responsive Grid */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on medium-sized screens */
+    padding: 0 20px; /* Adjust padding for better spacing on small screens */
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .grid-item {
+    max-width: 80%; /* Full width for grid items */
+    height: auto; /* Auto height to fit content */
+    padding:  8px; /* Reduced padding for better spacing */
+  }
+
+  .title {
+    font-size: 18px; /* Adjust title font size */
+    margin-bottom: 10px; /* Adjust margin for titles */
+  }
+
+  .description {
+    font-size: 12px; /* Smaller font for descriptions */
+    padding: 8px; /* Padding for description text */
+    height: auto; /* Auto height for description */
+    margin-bottom: 15px; /* Add margin for better spacing */
+  }
+
+  .find-more-btn {
+    padding: 10px 20px; /* Smaller button size */
+    font-size: 14px; /* Adjust font size for button */
+    margin-top: 10px; /* Add margin above the button */
+  }
+
+ .horizontal-align-container {
+    padding-left: 50px; /* Adjust left padding for smaller screens */
+    padding-top: 30px; /* Reduce top padding */
+  }
+
+  .title-orange {
+    font-size: 32px; /* Slightly smaller font size */
+    text-shadow: 3px 3px 5px rgba(255, 111, 0, 0.3); /* Slightly smaller shadow */
+  }
+
+  .header-section {
+    width: 90px; /* Smaller header section */
+    height: 90px; /* Adjust size */
+    margin-left: 15px; /* Less space between title and header */
+  }
+  /* Further responsiveness for very small screens (max-width: 480px) */
+  @media (max-width: 480px) {
+    .grid-container {
+      grid-template-columns: 1fr; /* 1 column on very small screens */
+       max-width: 95%; /* Slightly increase max-width for very small screens */
+    padding: 0 10px; /* Less padding for very small screens */
+    }
+
+    .grid-item {
+      padding: 5px; /* Less padding on very small screens */
+      
+    }
+
+    .title {
+      font-size: 16px; /* Further reduce title font size */
+    }
+
+    .description {
+      font-size: 10px; /* Smaller font size for very small screens */
+    }
+
+    .find-more-btn {
+      padding: 8px 16px; /* Even smaller button size */
+      font-size: 12px; /* Even smaller button font size */
+    }
+    .horizontal-align-container {
+    padding-left: 20px; /* Reduce left padding even more */
+    padding-top: 20px; /* Further reduce top padding */
+  }
+
+  .title-orange {
+    font-size: 28px; /* Even smaller font size for mobile */
+    text-shadow: 2px 2px 4px rgba(255, 111, 0, 0.3); /* Lighter shadow for mobile */
+  }
+
+  .header-section {
+    width: 80px; /* Smaller header section size for mobile */
+    height: 80px; /* Adjust header size */
+    margin-left: 10px; /* Less space between title and header */
+  }
+  }
+}
+
+>>>>>>> f9ae7d780d93e2f743ef5a45558b2b9ed2fde174

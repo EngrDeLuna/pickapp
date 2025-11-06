@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -337,4 +338,344 @@
 
 
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PICKAPP</title>
+  <link rel="stylesheet" href="style.css">
+   <script src="script.js"></script>
+</head>
+
+<body>
+
+  <!-- Navigation menu -->
+  <nav>
+
+
+
+    <div class="logo-container">
+    <img src="images/logo.png" alt="PICKAPP Logo" class="logo" />
+    </div>
+
+
+    <ul class="menu" id="menu">
+      <li><a href="index.html">HOME</a></li>
+      <li class="dropdown">
+        <input type="checkbox" id="about-toggle" />
+        <label for="about-toggle" class="dropdown-link">ABOUT <span class="nav-arrow">v</span></label>
+        <ul class="dropdown-content">
+          <li><a href="story.html">The Story Behind</a></li>
+          <li><a href="services.html">PICKAPP Services</a></li>
+          <li><a href="how-to-use.html">How to use?</a></li>
+          <li><a href="operating-areas.html">Operating Areas</a></li>
+          <li><a href="news.html">News</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <input type="checkbox" id="partner-toggle" />
+        <label for="partner-toggle" class="dropdown-link">BE OUR PARTNER <span class="nav-arrow">v</span></label>
+        <ul class="dropdown-content">
+          <li><a href="pickapp-driver.html">PICKAPP Driver</a></li>
+          <li><a href="pickapp-merchant.html">PICKAPP Merchant</a></li>
+        </ul>
+      </li>
+
+      <li><a href="our-product.html">OUR PRODUCT</a></li>
+
+      <li class="dropdown">
+        <input type="checkbox" id="more-toggle" />
+        <label for="more-toggle" class="dropdown-link">MORE <span class="nav-arrow">v</span></label>
+        <ul class="dropdown-content">
+          <li class="has-children">
+            <a href="#" class="parent-label">SUPPORT</a>
+            <ul class="submenu">
+              <li><a href="quick-links.html">Quick Links</a></li>
+              <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+          </li>
+          <li class="has-children">
+            <a href="#" class="parent-label">OUR POLICIES</a>
+            <ul class="submenu">
+              <li><a href="disclaimer.html">Disclaimer</a></li>
+              <li><a href="privacy-policy.html">Privacy Policy</a></li>
+              <li><a href="terms-and-condition.html">Terms and Conditions</a></li>
+              <li><a href="#">FAQs</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+ 
+
+
+
+
+
+
+    
+
+    
+    <!-- PERSON ICON + Sign In -->
+    <li class="dropdown person-dropdown">
+      <input type="checkbox" id="person-toggle" />
+      <label for="person-toggle" class="dropdown-link">
+        <img src="images/person-icon.png" alt="Person Icon" class="person-icon" />
+      </label>
+      <ul class="dropdown-content">
+        <li><a href="admin-login.php">Sign In</a></li>
+      </ul>
+    </li>
+  </ul>
+
+
+
+
+
+
+    <div class="hamburger-icon">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </nav>
+
+
+
+
+
+
+
+<!-- DRIVER HERO / HEADER SECTION -->
+<section class="driver" aria-labelledby="driverTitle">
+  <div class="driver-container">
+    <h2 id="driverTitle" class="driver-title">Join the PICKAPP Driver Community</h2>
+    <p class="driver-subtitle">
+      Start your journey with PICKAPP! Apply, complete requirements, and enjoy flexible earning while serving commuters with pride.
+    </p>
+    <div class="driver-cta-row">
+      <a class="driver-cta" href="#apply">Get Started</a>
+      <a class="driver-cta driver-cta-outline" href="#driver-requirements">See Requirements</a>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<!-- 🟢 First Row: 3 Cards -->
+<section id="driver-requirements" class="driver-cards-section">
+  
+  <!-- 1️⃣ Driver Requirements Card -->
+  <div class="driver-card">
+    <div class="driver-image-container">
+      <img src="images/driver1.png" alt="Driver Image">
+    </div>
+    <h3 class="driver-card-title">Ready to Drive? Here’s What You’ll Need</h3>
+    <button class="btn-orange" id="openRequirementsModal">Click Here</button>
+  </div>
+
+  <!-- 2️⃣ Documents Card -->
+  <div class="driver-card">
+    <div class="driver-image-container">
+      <img src="images/driver2.png" alt="Driver Image">
+    </div>
+    <h3 class="driver-card-title">Ready Your Docs! Here’s What to Bring</h3>
+    <button class="btn-orange" id="openDocumentsModal">Click Here</button>
+  </div>
+
+  <!-- 3️⃣ Apply Now Card -->
+  <div class="driver-card">
+    <div class="driver-image-container">
+      <img src="images/driver3.png" alt="Driver Image">
+    </div>
+    <h3 class="driver-card-title">Mag-apply Bilang PICKAPP Driver Ngayon</h3>
+    <button class="btn-orange" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSd-e-wGYAMAUxfrljXpxiqVCpuVqdudXVYdPQjFXy68vfraMA/viewform', '_blank')">
+      Register Here
+    </button>
+  </div>
+
+</section>
+
+<!-- 🟠 Second Row: 2 Cards (Centered) -->
+<section class="driver-cards-section second-row">
+  
+  <!-- 4️⃣ Take Exam Card -->
+  <div class="driver-card">
+    <div class="driver-image-container">
+      <img src="images/take-exam.png" alt="Exam Image">
+    </div>
+    <h3 class="driver-card-title">
+      Kumuha ng Pagsusulit para sa Maayos na Serbisyo Publiko
+    </h3>
+     <button class="btn-orange" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSd8egFBLoqYSRapeK7YmwolyHn92ICLGJCpT9PvxCfw0Ngmzw/viewform', '_blank')">
+      Take Exam
+    </button>
+  </div>
+
+  <!-- 5️⃣ Download App Card -->
+  <div class="driver-card">
+    <div class="driver-image-container">
+      <img src="images/download.png" alt="App Download Image">
+    </div>
+    <h3 class="driver-card-title">
+      I-download ang Pinakabagong PICKAPP Driver App
+    </h3>
+    <button class="btn-orange" onclick="window.open('https://example.com/download-app', '_blank')">
+      Download App
+    </button>
+  </div>
+
+</section>
+
+<!-- 🟠 MODAL 1: Driver Requirements -->
+<div id="requirementsModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <h2 class="modal-title">Driver Eligibility & Requirements</h2>
+    <ul class="modal-list">
+      <li>Drivers must be Filipino citizens.</li>
+      <li>Must possess a valid Professional Driver’s License.</li>
+      <li>Must be a TODA member with valid ID and certificate.</li>
+      <li>Must attend the PICKAPP Orientation and App Demo Program.</li>
+      <li>Must pass the PICKAPP Driver Online Exam (Passing Grade: 80%).</li>
+      <li>Must have an Android Smartphone or iPhone.</li>
+      <li>Must have an active mobile number and email address.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- 🟠 MODAL 2: Required Documents -->
+<div id="documentsModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <h2 class="modal-title">Required Driver Documents</h2>
+    <ul class="modal-list">
+      <li>Driver’s License.</li>
+      <li>Official Receipt / Certificate of Registration of Motor.</li>
+      <li>TODA ID.</li>
+      <li>TODA Certificate.</li>
+    </ul>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- DOWNLOAD SECTION -->
+<section class="download-section">
+  <div class="download-container">
+
+    
+    <!-- LEFT SIDE -->
+    <div class="download-left">
+      <div class="download-left-flex">
+
+
+        <!-- Text & Buttons -->
+        <div class="download-text">
+          <h2 class="download-title">Download the App</h2>
+          <div class="download-buttons">
+            <a href="#" class="download-btn">
+              <img src="images/googleplay.png" alt="Google Play" class="btn-img">
+            </a>
+            <a href="#" class="download-btn">
+              <img src="images/appstore.png" alt="App Store" class="btn-img">
+            </a>
+          </div>
+        </div>
+
+        <!-- Logo on the right -->
+        <div class="download-logo">
+          <img src="images/app-logo.png" alt="App Logo" class="app-logo">
+        </div>
+      </div>
+    </div>
+
+
+
+
+<div class="download-right">
+  <h2 class="follow-title">Follow Us</h2>
+  <div class="social-icons">
+    <div class="social-item facebook">
+      <img src="images/facebook.png" alt="Facebook">
+      <div class="social-hover">
+        <span>Facebook</span>
+      </div>
+    </div>
+    <div class="social-item messenger">
+      <img src="images/messenger.png" alt="Messenger">
+      <div class="social-hover">
+        <span>Messenger</span>
+      </div>
+    </div>
+    <div class="social-item instagram">
+      <img src="images/ig.png" alt="Instagram">
+      <div class="social-hover">
+        <span>Instagram</span>
+      </div>
+    </div>
+    <div class="social-item tiktok">
+      <img src="images/tiktok.png" alt="TikTok">
+      <div class="social-hover">
+        <span>TikTok</span>
+      </div>
+    </div>
+    <div class="social-item twitter">
+      <img src="images/twitter.png" alt="Twitter">
+      <div class="social-hover">
+        <span>Twitter</span>
+      </div>
+    </div>
+    <div class="social-item youtube">
+      <img src="images/youtube.png" alt="YouTube">
+      <div class="social-hover">
+        <span>YouTube</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+</section>
+
+
+
+
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <p>Ayala Technohub, Dillman Quezon City, Philippines</p>
+  <p>© PICKAPP 2024</p>
+</footer>
+
+
+
+
+
+
+</body>
+>>>>>>> f9ae7d780d93e2f743ef5a45558b2b9ed2fde174
 </html>

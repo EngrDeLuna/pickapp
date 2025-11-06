@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 document.addEventListener('DOMContentLoaded', () => {
   const dropdowns = Array.from(document.querySelectorAll('.dropdown'));
   const menu = document.querySelector('.menu');  // Main menu container
@@ -188,3 +189,195 @@ closeButton.addEventListener("click", () => {
     popup.style.display = "none"; // Hide the pop-up
   }, 300);
 });
+=======
+document.addEventListener('DOMContentLoaded', () => {
+  const dropdowns = Array.from(document.querySelectorAll('.dropdown'));
+  const menu = document.querySelector('.menu');  // Main menu container
+  const hamburgerIcon = document.querySelector('.hamburger-icon');  // Hamburger icon
+  const carouselImages = document.querySelector('.carousel-images'); // The container for images
+  const images = Array.from(carouselImages.querySelectorAll('img')); // Array of image elements
+  const dots = document.querySelectorAll('.carousel-dots .dot'); // Array of dot elements
+  let currentIndex = 0;  // Keeps track of the current image in the carousel
+
+  // Helper: Uncheck all dropdown checkboxes and update the arrows
+  function closeAllDropdowns() {
+    dropdowns.forEach(d => {
+      const cb = d.querySelector('input[type="checkbox"]');
+      if (cb) {
+        cb.checked = false;
+        updateArrow(cb); // Ensure arrow text is updated
+      }
+    });
+  }
+
+  // Update arrow text next to label: closed -> 'v', opened -> '^'
+  function updateArrow(checkbox) {
+    if (!checkbox) return;
+    const label = checkbox.nextElementSibling;
+    if (!label) return;
+    const arrow = label.querySelector('.arrow');
+    if (!arrow) return;
+    arrow.textContent = checkbox.checked ? '^' : 'v';
+  }
+
+  // Listen to changes on each dropdown checkbox to update arrow
+  dropdowns.forEach(d => {
+    const cb = d.querySelector('input[type="checkbox"]');
+    if (!cb) return;
+
+    // When a checkbox is clicked/opened, close other dropdowns
+    cb.addEventListener('change', () => {
+      if (cb.checked) {
+        // Close other dropdowns
+        dropdowns.forEach(other => {
+          const otherCb = other.querySelector('input[type="checkbox"]');
+          if (otherCb && otherCb !== cb) {
+            otherCb.checked = false;
+            updateArrow(otherCb);
+          }
+        });
+      }
+      updateArrow(cb);
+    });
+
+    // Set initial arrow state
+    updateArrow(cb);
+  });
+
+  // Clicking anywhere on the document: if click outside nav -> close dropdowns
+  document.addEventListener('click', (e) => {
+    const clickedInsideNav = e.target.closest('nav');
+    const clickedDropdown = e.target.closest('.dropdown');
+
+    if (clickedDropdown) {
+      // If clicked inside a dropdown, do nothing here except ensure other dropdowns are closed
+      const clickedCb = clickedDropdown.querySelector('input[type="checkbox"]');
+      dropdowns.forEach(d => {
+        const cb = d.querySelector('input[type="checkbox"]');
+        if (cb && cb !== clickedCb) {
+          cb.checked = false;
+          updateArrow(cb);
+        }
+      });
+      return;
+    }
+
+    // Clicked outside any dropdown
+    closeAllDropdowns();
+  });
+
+  // Clicking any nav link should close dropdowns
+  document.querySelectorAll('nav a').forEach(a => {
+    a.addEventListener('click', () => {
+      closeAllDropdowns();
+    });
+  });
+
+  // Hamburger icon toggle functionality (3-line to X)
+  hamburgerIcon.addEventListener('click', () => {
+    menu.classList.toggle('active');  // Show or hide menu
+    hamburgerIcon.classList.toggle('active');  // Toggle icon between 3-line and X
+
+    // Prevent closing the dropdown when hamburger is clicked
+    if (hamburgerIcon.classList.contains('active')) {
+      closeAllDropdowns();  // Ensure dropdowns are closed when the menu is toggled
+    }
+  });
+
+  // Carousel functionality
+  function showImage(index) {
+    // Loop the index to ensure it stays within range
+    if (index < 0) {
+      index = images.length - 1;
+    } else if (index >= images.length) {
+      index = 0;
+    }
+
+    // Move carousel images based on index
+    carouselImages.style.transform = `translateX(-${index * 100}%)`;
+    currentIndex = index; // Update current index
+
+    // Update the active dot
+    dots.forEach(dot => {
+      dot.classList.remove('active'); // Remove 'active' class from all dots
+    });
+    dots[currentIndex].classList.add('active'); // Add 'active' class to the current dot
+  }
+
+  // Next and Previous buttons functionality
+  const prevButton = document.querySelector('.prev');
+  const nextButton = document.querySelector('.next');
+
+  prevButton.addEventListener('click', () => {
+    showImage(currentIndex - 1); // Go to previous image
+  });
+
+  nextButton.addEventListener('click', () => {
+    showImage(currentIndex + 1); // Go to next image
+  });
+
+  // Auto-slide functionality (optional, adjust the interval as needed)
+  setInterval(() => {
+    showImage(currentIndex + 1);  // Automatically move to the next image
+  }, 5000); // Change image every 5 seconds
+
+  // Initialize the carousel by showing the first image
+  showImage(currentIndex);
+
+  // Swipe functionality for mobile devices
+  let startX = 0;
+  let endX = 0;
+
+  carouselImages.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+  });
+
+  carouselImages.addEventListener('touchmove', (e) => {
+    endX = e.touches[0].clientX;
+  });
+
+  carouselImages.addEventListener('touchend', () => {
+    if (startX - endX > 50) {
+      showImage(currentIndex + 1);  // Swipe left
+    } else if (endX - startX > 50) {
+      showImage(currentIndex - 1);  // Swipe right
+    }
+  });
+});
+
+// Play video when clicked
+document.querySelectorAll('.video-container').forEach((container) => {
+  container.addEventListener('click', function () {
+    const iframe = this.querySelector('iframe');
+
+    // Change the iframe 'src' to enable autoplay when clicked
+    const videoSrc = iframe.getAttribute('data-src');
+    
+    // Set the iframe's src with autoplay enabled
+    iframe.setAttribute('src', videoSrc + "?autoplay=1");
+
+    // Optional: Disable further clicks to interact with the iframe
+    iframe.classList.add('playing');
+  });
+});
+// Get elements
+const viewButton = document.getElementById("viewButton");
+const popup = document.getElementById("popup");
+const closeButton = document.getElementById("closeButton");
+
+// Show the pop-up when the "View" button is clicked
+viewButton.addEventListener("click", () => {
+  popup.style.display = "flex"; // Show the pop-up
+  setTimeout(() => {
+    popup.style.opacity = 1; // Fade in effect
+  }, 10);
+});
+
+// Close the pop-up when the close button is clicked
+closeButton.addEventListener("click", () => {
+  popup.style.opacity = 0; // Fade out effect
+  setTimeout(() => {
+    popup.style.display = "none"; // Hide the pop-up
+  }, 300);
+});
+>>>>>>> f9ae7d780d93e2f743ef5a45558b2b9ed2fde174

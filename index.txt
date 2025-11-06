@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -417,3 +418,424 @@
 </body>
 
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PICKAPP</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Navigation menu -->
+  <nav>
+    <div class="logo-container">
+    <img src="images/logo.png" alt="PICKAPP Logo" class="logo" />
+  </div>
+    <ul class="menu" id="menu">
+      <li><a href="#">HOME</a></li>
+      <li class="dropdown">
+        <input type="checkbox" id="about-toggle" />
+        <label for="about-toggle" class="dropdown-link">ABOUT <span class="arrow">v</span></label>
+        <ul class="dropdown-content">
+          <li><a href="#">The Story Behind PICKAPP Services</a></li>
+          <li><a href="#">How to use?</a></li>
+          <li><a href="#">Operating Areas</a></li>
+          <li><a href="#">News</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <input type="checkbox" id="partner-toggle" />
+        <label for="partner-toggle" class="dropdown-link">BE OUR PARTNER <span class="arrow">v</span></label>
+        <ul class="dropdown-content">
+          <li><a href="#">PICKAPP Driver</a></li>
+          <li><a href="#">PICKAPP Merchant</a></li>
+        </ul>
+      </li>
+
+      <li><a href="#">OUR PRODUCT</a></li>
+
+      <li class="dropdown">
+        <input type="checkbox" id="more-toggle" />
+        <label for="more-toggle" class="dropdown-link">MORE <span class="arrow">v</span></label>
+        <ul class="dropdown-content">
+          <li><a href="#">OUR PRODUCT</a></li>
+          <li class="has-children">
+            <a href="#" class="parent-label">SUPPORT</a>
+            <ul class="submenu">
+              <li><a href="#">Quick Links</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </li>
+          <li class="has-children">
+            <a href="#" class="parent-label">OUR POLICIES</a>
+            <ul class="submenu">
+              <li><a href="#">Disclaimer</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms and Conditions</a></li>
+              <li><a href="#">FAQs</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <div class="hamburger-icon">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </nav>
+<!-- Hero Section -->
+<section class="hero-section">
+  <!-- Carousel Container -->
+  <div class="carousel-container">
+    <div class="carousel-images">
+      <img src="images/hero1.png" alt="Image 1">
+      <img src="images/hero2.png" alt="Image 2">
+      <img src="images/hero3.png" alt="Image 3">
+      <img src="images/hero4.png" alt="Image 4">
+      <img src="images/hero5.png" alt="Image 5">
+      <img src="images/hero6.png" alt="Image 6">
+    </div>
+  </div>
+
+  
+
+  <!-- External navigation arrows outside of the carousel container -->
+  <div class="carousel-nav">
+    <span class="prev">&#10094;</span>
+    <span class="next">&#10095;</span>
+  </div>
+</section>
+
+
+
+<!-- Wrap the entire content with a parent div -->
+<div class="full-page-background">
+  <!-- Video Section -->
+  <section class="video-section">
+    <!-- Left Video Wrapper -->
+<div class="video-wrapper">
+  <div class="video-container">
+    <iframe class="youtube-iframe" 
+            data-src="https://www.youtube.com/embed/khmlN9m1Z7U" 
+            src="https://www.youtube.com/embed/khmlN9m1Z7U?rel=0" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen></iframe>
+  </div>
+  <!-- Text below the left video -->
+  <div class="video-title">
+    Introducing PICKAPP Hi-GO: The Future of Electric Mobility door to door travel
+  </div>
+  
+  <!-- Read More Button -->
+  <div class="read-more-container">
+    <button class="read-more-btn">READ MORE</button>
+  </div>
+</div>
+
+
+    <!-- Right Video Wrapper -->
+    <div class="video-wrapper">
+      <div class="video-container">
+        <iframe class="youtube-iframe" 
+                data-src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2" 
+                src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2?rel=0" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen></iframe>
+      </div>
+      <!-- Text below the right video -->
+      <div class="video-title">
+        ACHIEVEMENT UNLOCKED!
+      </div>
+
+      <!-- Achievement Text below the right video -->
+      <div class="achievement-text">
+        <p>We are excited to announce the successful contract signings between PickApp and two esteemed partners: <strong class="highlight">TODA 1 Manila Federation</strong> and <strong class="highlight">Huahai Corporation</strong> in <span class="highlight">China</span>. These significant agreements represent a major milestone in our journey to revolutionize sustainable mobility and fulfill our commitment to environmental responsibility.</p>
+
+        <h3><span class="highlight">Contract Signing with TODA 1 Manila Federation</span>:</h3>
+        <ul>
+          <li>Partnership to introduce the cutting-edge <strong>PICKAPP HI-GO Electric Tricycle</strong>.</li>
+          <li>Solution for sustainable urban mobility in Manila.</li>
+          <li>Strategic collaboration to drive a greener future for both drivers and passengers.</li>
+        </ul>
+
+        <h3><span class="highlight">Contract Signing with Huahai Corporation in China</span>:</h3>
+        <ul>
+          <li>Official partnership with Huahai Corporation, a leader in electric vehicle manufacturing.</li>
+          <li>Huahai will be the trusted supplier of electric tricycles for PICKAPP.</li>
+          <li>Delivering eco-friendly vehicles with advanced technology.</li>
+        </ul>
+
+        <p>Location: Ayala Technohub, Dillman Quezon City, Philippines</p>
+        <footer>© PICKAPP 2024</footer>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+<!-- Parent Container for Horizontal Alignment -->
+<div class="horizontal-align-container">
+  <!-- Title -->
+  <h1 class="title-orange">PICKAPP</h1>
+
+  <!-- Header Section -->
+  <div class="header-section"></div>
+</div>
+
+<!-- Grid Section -->
+<section class="grid-section">
+  <div class="grid-container">
+    <!-- Grid Item -->
+    <div class="grid-item">
+      <div class="image-container">
+        <img src="images/findout1.png" alt="Image" class="grid-image" />
+      </div>
+      <div class="title">PICKAPP Hi-GO at the 2024 Huaihai New Energy Summit</div>
+      <div class="description">
+        <p>
+          PICKAPP proudly presents the Hi-GO Electric Vehicle at the 2024 Huaihai New Energy Global Summit in China.
+        </p>
+      </div>
+      <div class="button-container">
+        <button class="find-more-btn">Find Out More</button>
+      </div>
+    </div>
+
+    
+    <!-- Repeat for other grid items -->
+    <div class="grid-item">
+      <div class="image-container">
+        <img src="images/findout2.png" alt="Image" class="grid-image" />
+      </div>
+      <div class="title">Soft Launch of PICKAPP App & Charging Station</div>
+      <div class="description">
+        <p>
+          PICKAPP introduces the Application and Swapping/Charging Station at TechnoHub, UP Ayala Technohub. 
+        </p>
+      </div>
+      <div class="button-container">
+        <button class="find-more-btn">Find Out More</button>
+      </div>
+    </div>
+    
+
+
+    <div class="grid-item">
+      <div class="image-container">
+        <img src="images/findout3.png" alt="Image" class="grid-image" />
+      </div>
+      <div class="title">PICKAPP & Huaihai Contract Signing</div>
+      <div class="description">
+<p>
+  Breaking Boundaries! PickApp and Huaihai Unite for Success!
+</p>
+      </div>
+      <div class="button-container">
+        <button class="find-more-btn">Find Out More</button>
+      </div>
+    </div>
+
+    <div class="grid-item">
+      <div class="image-container">
+        <img src="images/findout4.png" alt="Image" class="grid-image" />
+      </div>
+      <div class="title">PICKAPP & TODA 1 Manila Federation</div>
+      <div class="description">
+<p>
+  Powerful Partnership Unveiled: PickApp & TODA 1 Manila Federation Join Forces!
+</p>
+      </div>
+      <div class="button-container">
+        <button class="find-more-btn">Find Out More</button>
+      </div>
+    </div>
+
+
+    <div class="grid-item">
+      <div class="image-container">
+        <img src="images/findout5.png" alt="Image" class="grid-image" />
+      </div>
+      <div class="title">PICKAPP e-Mobility for a Better Future</div>
+      <div class="description">
+        <p>
+          Narito na ang PICKAPP E-mobility, ligtas at eco-friendly na paraan ng transportasyon! Abangan ang aming pagdating!
+        </p>
+      </div>
+      <div class="button-container">
+        <button class="find-more-btn">Find Out More</button>
+      </div>
+    </div>
+
+
+    <div class="grid-item">
+      <div class="image-container">
+        <img src="images/findout6.png" alt="Image" class="grid-image" />
+      </div>
+      <div class="title">PICKAPP Free Ride: A New Experience</div>
+      <div class="description">
+        <p>
+          #PICKAPP Free Ride in U.P Ayala Land Techno Hub. Say NO to long walks, and YES to a short, convenient ride with PICKAPP!
+        </p>    
+        </div>
+      <div class="button-container">
+        <button class="find-more-btn">Find Out More</button>
+      </div>
+    </div>
+
+
+    <div class="grid-item">
+      <div class="image-container">
+        <img src="images/findout7.png" alt="Image" class="grid-image" />
+      </div>
+      <div class="title">PICKAPP TVS Launch: Revolutionizing Ride</div>
+      <div class="description">
+        <p>
+          #PICKAPP TVS Launching that was held in Manila last November 26, 2021. #KayangKayaKungSamaSama
+        </p>
+      </div>
+      <div class="button-container">
+        <button class="find-more-btn">Find Out More</button>
+      </div>
+    </div>
+
+
+    <div class="grid-item">
+      <div class="image-container">
+        <img src="images/findout8.png" alt="Image" class="grid-image" />
+      </div>
+      <div class="title">PICKAPP UPTH: Ride Smart, Ride with Us!</div>
+      <div class="description">
+        <p>
+          UMAARANGKADA NA ang #PICKAPP sa U.P AyalaLand TechnoHub. Ikaw na lang ang hinihintay, I-PICKAPP mo na! Ligtas at Murang Pamasahe!
+        </p>
+      </div>
+      <div class="button-container">
+        <button class="find-more-btn">Find Out More</button>
+      </div>
+    </div>
+
+
+
+    <div class="grid-item">
+      <div class="image-container">
+        <img src="images/findout9.png" alt="Image" class="grid-image" />
+      </div>
+      <div class="title">PICKAPP at Ayala Malls The 30th: Ride Smart</div>
+      <div class="description">
+        <p>
+          Shop with ANA in partnership with PICKAPP! Enjoy the best in convenience and smart rides at Ayala Malls (The 30th).
+        </p>
+      </div>
+      <div class="button-container">
+        <button class="find-more-btn">Find Out More</button>
+      </div>
+    </div>
+
+
+
+    <div class="grid-item">
+      <div class="image-container">
+        <img src="images/findout10.png" alt="Image" class="grid-image" />
+      </div>
+      <div class="title">PICKAPP E-trike: Your Eco Ride Solution</div>
+      <div class="description">
+        <p>
+          Why are ANA and PICKAPP Delivery called "Convenience at its best"? Discover how we make your ride easier, faster, and more efficient.
+        </p>
+      </div>
+      <div class="button-container">
+        <button class="find-more-btn">Find Out More</button>
+      </div>
+    </div>
+
+
+    <div class="grid-item">
+      <div class="image-container">
+        <img src="images/findout11.png" alt="Image" class="grid-image" />
+      </div>
+      <div class="title">PICKAPP Manila: Ride the City Smart</div>
+      <div class="description">
+        <p>
+          Ka-PickApp sa City of Manila! We're ready to serve you, Manila. Join us and experience convenient, affordable, and safe rides all around.
+        </p>
+      </div>
+      <div class="button-container">
+        <button class="find-more-btn">Find Out More</button>
+      </div>
+    </div>
+
+
+
+    <div class="grid-item">
+      <div class="image-container">
+        <img src="images/findout12.png" alt="Image" class="grid-image" />
+      </div>
+      <div class="title">PICKAPP: The Distinct Imus Shopping Ride</div>
+      <div class="description">
+        <p>
+          Shop with A.N.A at The District Imus! Let PICKAPP deliver your shopping needs right to your door with convenience and speed.
+        </p>
+      </div>
+      <div class="button-container">
+        <button class="find-more-btn">Find Out More</button>
+      </div>
+    </div>
+
+
+
+    <div class="grid-item">
+      <div class="image-container">
+        <img src="images/findout13.png" alt="Image" class="grid-image" />
+      </div>
+      <div class="title">PICKAPP: Distinct Shopping at Dasmariñas</div>
+      <div class="description">
+        <p>
+          Shop with A.N.A at The District Dasmarinas! PICKAPP will conveniently deliver your shopping needs right to your doorstep.
+        </p>
+      </div>
+      <div class="button-container">
+        <button class="find-more-btn">Find Out More</button>
+      </div>
+    </div>
+
+
+
+
+
+    <div class="grid-item">
+      <div class="image-container">
+        <img src="images/findout14.png" alt="Image" class="grid-image" />
+      </div>
+      <div class="title">PICKAPP Angono: Kapit-Kamay sa Rizal</div>
+      <div class="description">
+        <p>
+          Simula na ang pagtutulungan mula sa #PickAppPH at TODA ng Angono, Rizal para sa komunidad. Mabuhay ang Pilipino! #GawangPilipinoParaSaPilipino
+        </p>
+      </div>
+      <div class="button-container">
+        <button class="find-more-btn">Find Out More</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+  <!-- External JS -->
+  <script src="script.js"></script>
+</body>
+
+</html>
+>>>>>>> f9ae7d780d93e2f743ef5a45558b2b9ed2fde174
