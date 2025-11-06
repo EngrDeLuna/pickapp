@@ -1,0 +1,259 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PICKAPP</title>
+  <link rel="icon" href="images/logo.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+
+</head>
+
+<body>
+
+  <!-- Navigation menu -->
+<nav>
+  <div class="logo-container">
+    <img src="images/logo.png" alt="PICKAPP Logo" class="logo" />
+  </div>
+
+  <ul class="menu" id="menu">
+    <li><a href="index.html">HOME</a></li>
+
+    <li class="dropdown">
+      <input type="checkbox" id="about-toggle" />
+      <label for="about-toggle" class="dropdown-link">ABOUT <span class="nav-arrow">▼</span></label>
+      <ul class="dropdown-content">
+        <li><a href="story.html">The Story Behind</a></li>
+        <li><a href="services.html ">PICKAPP Services</a></li>
+        <li><a href="how-to-use.html">How to use?</a></li>
+        <li><a href="operating-areas.html">Operating Areas</a></li>
+        <li><a href="news.html">News</a></li>
+      </ul>
+    </li>
+
+    <li class="dropdown">
+      <input type="checkbox" id="partner-toggle" />
+      <label for="partner-toggle" class="dropdown-link">BE OUR PARTNER <span class="nav-arrow">▼</span></label>
+      <ul class="dropdown-content">
+        <li><a href="pickapp-driver.html">PICKAPP Driver</a></li>
+        <li><a href="pickapp-merchant.html">PICKAPP Merchant</a></li>
+      </ul>
+    </li>
+
+    <li><a href="our-product.html">OUR PRODUCT</a></li>
+
+    <!-- MORE menu -->
+    <li class="dropdown">
+      <input type="checkbox" id="more-toggle" />
+      <label for="more-toggle" class="dropdown-link">MORE <span class="nav-arrow">▼</span></label>
+      <ul class="dropdown-content">
+        <li class="has-children">
+          <a href="#" class="parent-label">SUPPORT</a>
+          <ul class="submenu">
+            <li><a href="quick-links.html">Quick Links</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+          </ul>
+        </li>
+        <li class="has-children">
+          <a href="#" class="parent-label">OUR POLICIES</a>
+          <ul class="submenu">
+            <li><a href="disclaimer.html">Disclaimer</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms-and-condition.html">Terms and Conditions</a></li>
+            <li><a href="#">FAQs</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- PERSON ICON + Sign In -->
+    <li class="dropdown person-dropdown">
+      <input type="checkbox" id="person-toggle" />
+      <label for="person-toggle" class="dropdown-link">
+        <img src="images/person-icon.png" alt="Person Icon" class="person-icon" />
+      </label>
+      <ul class="dropdown-content">
+        <li><a href="admin-login.php">Sign In</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <div class="hamburger-icon">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </div>
+</nav>
+
+
+
+ <!-- CONTACT US SECTION -->
+  <section class="contact-section">
+    <div class="contact-container">
+      <!-- LEFT -->
+      <div class="contact-left">
+        <h2>PICKAPP Contact Center</h2>
+        <p>BOOK YOUR RIDE VIA HOTLINE<br>(Office Hour) Hotline Numbers<br>
+          Call us anytime ka-PICKAPP!</p>
+
+        <div class="hotline-box">
+          <h3>Hotline Numbers</h3>
+          <p> <strong>Globe:</strong> 0917 130 5214 / 0917 110 8541</p>
+          <p> <strong>Smart:</strong> 0919 081 0712 / 0919 081 077</p>
+        </div>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="contact-right">
+        <h2>Message Us</h2>
+        <form action="contact-process.php" method="POST">
+          <input type="text" name="name" placeholder="Name" required>
+          <input type="email" name="email" placeholder="Email *" required>
+          <textarea name="message" rows="5" placeholder="Message" required></textarea>
+          <button type="submit">Send</button>
+          <p class="recaptcha-note">
+            This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- DOWNLOAD SECTION -->
+<section class="download-section">
+  <div class="download-container">
+
+    
+    <!-- LEFT SIDE -->
+    <div class="download-left">
+      <div class="download-left-flex">
+
+
+        <!-- Text & Buttons -->
+        <div class="download-text">
+          <h2 class="download-title">Download the App</h2>
+          <div class="download-buttons">
+            <a href="#" class="download-btn">
+              <img src="images/googleplay.png" alt="Google Play" class="btn-img">
+            </a>
+            <a href="#" class="download-btn">
+              <img src="images/appstore.png" alt="App Store" class="btn-img">
+            </a>
+          </div>
+        </div>
+
+        <!-- Logo on the right -->
+        <div class="download-logo">
+          <img src="images/app-logo.png" alt="App Logo" class="app-logo">
+        </div>
+      </div>
+    </div>
+
+
+
+
+<div class="download-right">
+  <h2 class="follow-title">Follow Us</h2>
+  <div class="social-icons">
+    <div class="social-item facebook">
+      <img src="images/facebook.png" alt="Facebook">
+      <div class="social-hover">
+        <span>Facebook</span>
+      </div>
+    </div>
+    <div class="social-item messenger">
+      <img src="images/messenger.png" alt="Messenger">
+      <div class="social-hover">
+        <span>Messenger</span>
+      </div>
+    </div>
+    <div class="social-item instagram">
+      <img src="images/ig.png" alt="Instagram">
+      <div class="social-hover">
+        <span>Instagram</span>
+      </div>
+    </div>
+    <div class="social-item tiktok">
+      <img src="images/tiktok.png" alt="TikTok">
+      <div class="social-hover">
+        <span>TikTok</span>
+      </div>
+    </div>
+    <div class="social-item twitter">
+      <img src="images/twitter.png" alt="Twitter">
+      <div class="social-hover">
+        <span>Twitter</span>
+      </div>
+    </div>
+    <div class="social-item youtube">
+      <img src="images/youtube.png" alt="YouTube">
+      <div class="social-hover">
+        <span>YouTube</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+</section>
+
+
+
+
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <p>Ayala Technohub, Dillman Quezon City, Philippines</p>
+  <p>© PICKAPP 2024</p>
+</footer>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
