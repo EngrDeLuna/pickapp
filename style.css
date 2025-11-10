@@ -330,6 +330,8 @@ input[type="checkbox"] {
 .fade-in {
   opacity: 1;
 }
+
+
 #network-bg {
   position: absolute;
   top: 0;
@@ -2367,14 +2369,14 @@ footer {
   margin-top: 1rem;
   text-align: left;
 }
-
 /* ----------------- Responsive for mobile (≤768px) ----------------- */
 @media (max-width: 768px) {
   .video-section.side-layout {
     flex-direction: column; /* stack video and text vertically */
     padding: 0 1rem;        /* small left & right margin */
     width: 100%;
-   margin: 80px 0 0 0; 
+    margin: 0;
+    margin-top: 100px;       /* ✅ ensures not hidden under navbar */
     box-sizing: border-box;
   }
 
@@ -2382,26 +2384,25 @@ footer {
   .video-section.side-layout .video-wrapper:first-child {
     flex: 1 1 100%;
     max-width: 100%;
-    align-items: center;    /* center video horizontally */
+    align-items: center;    
     text-align: center;
     padding: 0;
-    margin-top: 30px;
   }
 
   /* Text wrapper */
   .video-section.side-layout .video-wrapper:last-child {
     flex: 1 1 100%;
     max-width: 100%;
-    align-items: center;    /* center text horizontally */
+    align-items: center;
     text-align: center;
-    padding: 0.5rem 0;      /* small top & bottom padding */
+    padding: 0.5rem 0;
   }
 
   /* Video container */
   .video-section.side-layout .video-container {
     width: 100%;
     height: auto;
-    border-radius: 10px;    /* keep slight rounding for style */
+    border-radius: 10px;
   }
 
   /* Title */
@@ -2547,27 +2548,28 @@ footer {
 
 
 
-
-
-/* HOW TO TITLE STYLE */
+/* =========================
+   HOW TO TITLE STYLE
+   ========================= */
 .how-to-title {
   text-align: center;
-  margin: 10px; /* remove top & bottom gap */
+  margin: 5px; /* minimal desktop spacing */
   padding: 10px;
 }
 
+/* Desktop / Default */
 .how-to-title h4 {
   display: inline-block;
-  background-color: #ff7b00; /* orange */
+  background-color: #ff7b00;
   color: #fff;
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: 1.5rem; /* consistent desktop size */
   padding: 0.4rem 1.2rem;
   border: 2px solid #fff;
   border-radius: 8px;
   letter-spacing: 1px;
   transition: all 0.3s ease;
-  margin: 0; /* remove extra space */
+  margin: 0;
 }
 
 .how-to-title h4:hover {
@@ -2575,45 +2577,41 @@ footer {
   box-shadow: 0 4px 10px #FFA500; /* Light shadow */
 }
 
-/* Specific fix for the second carousel (Pick a Drop) */
-#pick-a-drop .gallery-main img {
-  object-fit: contain; /* ✅ show full image */
-  height: auto; /* scale properly */
-  max-height: 500px; /* adjust this as needed */
+/* =========================
+   HERO SECTION IMAGES
+   ========================= */
+.hero-section .gallery-main img {
+  object-fit: contain; /* show full image */
+  height: auto;
+  max-height: 500px; /* universal max height */
   width: 100%;
 }
 
+.hero-wrapper {
+  position: relative;
+  overflow: hidden;
+}
 
-/* ✅ Responsive adjustments */
+
+.hero-wrapper .hero-section .gallery-container {
+  position: relative;
+  z-index: 1; /* content sits above canvas */
+}
+/* =========================
+   TABLET & MOBILE RESPONSIVE (up to 768px)
+   ========================= */
 @media (max-width: 768px) {
-   #pick-a-drop .gallery-main img {
+  /* Adjust main gallery image height */
+  .hero-section .gallery-main img {
     max-height: 350px;
   }
-}
 
-@media (max-width: 480px) {
-  #pick-a-drop .gallery-main img {
-    max-height: 250px;
-  }
-  .how-to-title h3 {
-    font-size: 1.5rem; /* smaller on tablet */
-    padding: 0.35rem 1rem;
+  /* Keep title above navbar and maintain size proportionally */
+  .how-to-title h4 {
+    font-size: 1.3rem; /* slightly smaller for tablets */
+    padding: 0.3rem 1rem;
   }
 }
-
-@media (max-width: 480px) {
-  .how-to-title h3 {
-    font-size: 1.2rem; /* smaller on mobile */
-    padding: 0.3rem 0.9rem;
-  }
-}
-
-
-
-
-
-
-
 
 
 
