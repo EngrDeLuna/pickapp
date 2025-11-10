@@ -2374,7 +2374,7 @@ footer {
     flex-direction: column; /* stack video and text vertically */
     padding: 0 1rem;        /* small left & right margin */
     width: 100%;
-    margin: 0;
+   margin: 80px 0 0 0; 
     box-sizing: border-box;
   }
 
